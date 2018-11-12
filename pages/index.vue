@@ -13,7 +13,7 @@
     <nav class="navbar">
       <div class="navbar__cnt cnt">
         <ul>
-          <li class="header__item-nav"><a href="">Nav item1</a></li>
+          <li class="header__item-nav"><a href="">Link1</a></li>
           <li class="header__item-nav"><a href="">Nav item2</a></li>
           <li class="header__item-nav"><a href="">Nav item3</a></li>
           <li class="header__item-nav"><a href="">Nav item4</a></li>
