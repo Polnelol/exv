@@ -30,7 +30,7 @@
               <div class="large-article__img">
                 <img src="">
               </div>
-              <div class="large-article__title">Title</div>
+              <div v-html="LargeTitle" class="large-article__title"></div>
               <div class="large-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
 </div>
             </div>
@@ -138,7 +138,17 @@
   </div>
 </template>
 
-<script></script>
+<script>
+  import LargeTitle from '../static/LargeTitle.md'
+
+  export default {
+    computed: {
+      LargeTitle() {
+        return LargeTitle
+      }
+    }
+  }
+</script>
 
 <style>
 .header {
