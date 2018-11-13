@@ -5,7 +5,7 @@
         </div>
         <div class="header__search-block">
             <input class="header__search">
-            <img class="header__search-icon" src="/_nuxt/pages/header/header-img/loupe.png">
+            <img class="header__search-icon" src="/header-img/loupe.png">
         </div>
       </div>
     </header>
@@ -19,7 +19,7 @@
     .header__logo {
         width: 150px;
         height: 50px;
-        background: url("header-img/logo.svg") no-repeat center;
+        background: url("/header-img/logo.svg") no-repeat center;
     }
 
     .header__search-block {
