@@ -1,18 +1,7 @@
 <template>
   <div class="container">
-    <Header/>
-    <nav class="navbar">
-      <div class="navbar__cnt cnt">
-        <ul>
-          <li class="header__item-nav"><a href="">Link1</a></li>
-          <li class="header__item-nav"><a href="">Nav item2</a></li>
-          <li class="header__item-nav"><a href="">Nav item3</a></li>
-          <li class="header__item-nav"><a href="">Nav item4</a></li>
-          <li class="header__item-nav"><a href="">Nav item5</a></li>
-          <li class="header__item-nav"><a href="">Nav item6</a></li>
-        </ul>
-      </div>
-    </nav>      
+    <Header/> 
+    <Nav/>    
     <section class="main-content">
       <div class="main-content__cnt cnt">
         <section class="main-content__primary-news">
@@ -130,11 +119,13 @@
 
 <script>
   import Header from '~/pages/header/header.vue'
+  import Nav from '~/pages/nav/nav.vue'
   import LargeTitle from '../static/LargeTitle.md'
 
   export default {
     components: {
-      Header
+      Header,
+      Nav
     },
     computed: {
       LargeTitle() {
@@ -154,21 +145,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.navbar {
-  height: 60px;
-  background: #f9f9f9;
-  border-bottom: 1px solid #e8e8e8;
-  margin-bottom: 30px;
-}
-
-.navbar ul {
-  display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    list-style: none;
-    padding: 0;
 }
 
 .main-content__primary-news {

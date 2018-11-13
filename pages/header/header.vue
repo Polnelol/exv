@@ -54,18 +54,4 @@
         align-items: center;
         font-size: 24px;
     }
-
-    .header__item-nav {
-        margin-right: 25px;
-        height: 60px;
-        line-height: 60px;
-    }
-
-    .header__item-nav a {
-        display: block;
-        text-decoration: none;
-        font-size: 16px;
-        color: #000;
-        text-transform: uppercase;
-    }
 </style>
