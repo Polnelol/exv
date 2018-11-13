@@ -1,15 +1,6 @@
 <template>
   <div class="container">
-    <header class="header">
-      <div class="header__cnt cnt">
-        <div class="header__logo">
-          Logo
-        </div>
-        <div class="header__search">
-          search
-        </div>
-      </div>
-    </header>
+    <Header/>
     <nav class="navbar">
       <div class="navbar__cnt cnt">
         <ul>
@@ -139,9 +130,13 @@
 </template>
 
 <script>
+  import Header from '~/pages/header/header.vue'
   import LargeTitle from '../static/LargeTitle.md'
 
   export default {
+    components: {
+      Header
+    },
     computed: {
       LargeTitle() {
         return LargeTitle
@@ -151,9 +146,6 @@
 </script>
 
 <style>
-.header {
-  background-color: #E78A46;
-}
 
 .container {
 }
@@ -163,15 +155,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.header__cnt {
-  color: #fff;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 24px;
 }
 
 .navbar {
@@ -187,20 +170,6 @@
     justify-content: flex-start;
     list-style: none;
     padding: 0;
-}
-
-.header__item-nav {
-  margin-right: 25px;
-  height: 60px;
-  line-height: 60px;
-}
-
-.header__item-nav a {
-  display: block;
-  text-decoration: none;
-  font-size: 16px;
-  color: #000;
-  text-transform: uppercase;
 }
 
 .main-content__primary-news {
