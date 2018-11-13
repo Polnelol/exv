@@ -12,7 +12,8 @@
 
 <style>
     .header {
-    background-color: #E78A46;
+    background-color: #FFF7EA;
+    border-bottom: 1px solid #e8e8e8;
     }
 
     .header__logo {
