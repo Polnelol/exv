@@ -15,7 +15,7 @@
 
 <script></script>
 
-<style>
+<style scoped>
     .navbar {
         height: 60px;
         background: #f9f9f9;

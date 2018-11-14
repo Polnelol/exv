@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Sidebar/>
+    <CryptoWidget/>
     <nuxt/>
     <slot name="header"></slot>
   </div>

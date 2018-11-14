@@ -57,7 +57,22 @@
             </div>
           </div>
           <div class="main-content-right right-cnt">
-            <Sidebar/>
+            <div class="crypto-logo-wrap">
+              <div v-for="item in items" :key="item.id" class="crypto-logo-item">
+                <img v-bind:src="item.img" v-bind:alt="item.title">
+              </div>
+            </div>
+            <div class="crypto-info-wrap">
+              <div v-for="currency in currencies" :key="currency.name" class="crypto-info-item">
+                  <cryptoWidget 
+                      :name="currency.name" 
+                      :price_usd="currency.price_usd" 
+                      :percent_change_24h="currency.percent_change_24h"
+                      :rank="currency.rank"
+                  >
+                  </cryptoWidget>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -68,21 +83,49 @@
 <script>
   import Header from '~/pages/header/header.vue'
   import Nav from '~/pages/nav/nav.vue'
-  import Sidebar from '~/pages/sidebar/sidebar.vue'
   import LargeTitle from '../static/LargeTitle.md'
+  import CryptoWidget from '~/components/CryptoWidget.vue'
+  import axios from "axios";
 
   export default {
     components: {
       Header,
       Nav,
-      Sidebar
+      CryptoWidget
     },
     computed: {
       LargeTitle() {
         return LargeTitle
       }
-    }
+    },
+    asyncData(){
+        return axios
+        .get("https://api.coinmarketcap.com/v1/ticker/?limit=10")
+        .then(response => {
+            return {
+                currencies: response.data
+            };
+        });
+    },
+    data () {
+        return {
+            items: [
+                {title: '1', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1.png'},
+                {title: '2', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png'},
+                {title: '3', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/52.png'},
+                {title: '4', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1831.png'},
+                {title: '5', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/512.png'},
+                {title: '6', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png'},
+                {title: '7', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2.png'},
+                {title: '8', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2010.png'},
+                {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
+                {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
+            ]
+        }
   }
+  }
+
+
 </script>
 
 <style>
@@ -103,11 +146,12 @@
 }
 
 .left-cnt {
-  width: 75%;
+  width: 70%;
 }
 
 .right-cnt {
-  width: 20%;
+  display: flex;
+  width: 25%;
 }
 
 .large-article {
@@ -176,6 +220,35 @@
 .small-article__title {
   font-size: 18px;
   margin-bottom: 15px;
+}
+
+.crypto-logo-wrap {
+  min-width: 35px;
+  margin-right: 20px;
+}
+
+
+.crypto-logo-item {
+  margin-bottom: 25px;
+  font-size: 16px;
+  display: flex;
+  min-height: 42px;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.crypto-logo-item img {
+  width: 32px;
+  height: 32px;
+}
+
+.crypto-info-item {
+  font-size: 16px;
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 230px;
 }
 </style>
 

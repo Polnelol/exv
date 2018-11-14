@@ -26,9 +26,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800', rel: 'stylesheet'}
+      { href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800', rel: 'stylesheet'},
+      { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,400italic|Material+Icons' }
     ]
   },
+
   /*
   ** Customize the progress bar color
   */
@@ -36,7 +38,17 @@ module.exports = {
   /*
   ** Build configuration
   */
+
+ css: [
+  { src: 'vue-material/dist/vue-material.min.css', lang: 'css' },
+  { src: '~/assets/theme.scss', lang: 'scss' } // include vue-material theme engine
+],
+plugins: [
+  { src: '~/plugins/vue-material' }
+],
   build: {
+
+    vendor : ['axios"', 'vue-material'],
     /*
     ** Run ESLint on save
     */
