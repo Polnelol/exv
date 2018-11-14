@@ -35,6 +35,7 @@
         font-size: 18px;
         padding: 0 10px;
         border: none;
+        padding-right: 40px;
     }
 
     .header__search-icon {
