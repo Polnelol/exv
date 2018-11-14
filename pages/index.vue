@@ -57,59 +57,7 @@
             </div>
           </div>
           <div class="main-content-right right-cnt">
-            <div class="right-cnt__news">
-              <div class="news-title">News</div>
-              <a href="#">
-                <div class="right-cnt__news-item">
-                  <div class="news-item__title">News title</div>
-                  <div class="news-item__info">
-                    <div class="news-date">date</div>
-                    <div class="news-likes">likes</div>
-                    <div class="news-views">views</div>
-                  </div>
-                </div>
-              </a>
-              <a href="#">
-                <div class="right-cnt__news-item">
-                  <div class="news-item__title">News title</div>
-                  <div class="news-item__info">
-                    <div class="news-date">date</div>
-                    <div class="news-likes">likes</div>
-                    <div class="news-views">views</div>
-                  </div>
-                </div>
-              </a>
-              <a href="#">
-                <div class="right-cnt__news-item">
-                  <div class="news-item__title">News title</div>
-                  <div class="news-item__info">
-                    <div class="news-date">date</div>
-                    <div class="news-likes">likes</div>
-                    <div class="news-views">views</div>
-                  </div>
-                </div>
-              </a>
-              <a href="#">
-                <div class="right-cnt__news-item">
-                  <div class="news-item__title">News title</div>
-                  <div class="news-item__info">
-                    <div class="news-date">date</div>
-                    <div class="news-likes">likes</div>
-                    <div class="news-views">views</div>
-                  </div>
-                </div>
-              </a>
-              <a href="#">
-                <div class="right-cnt__news-item">
-                  <div class="news-item__title">News title</div>
-                  <div class="news-item__info">
-                    <div class="news-date">date</div>
-                    <div class="news-likes">likes</div>
-                    <div class="news-views">views</div>
-                  </div>
-                </div>
-              </a>
-            </div>
+            <Sidebar/>
           </div>
         </section>
       </div>
@@ -120,12 +68,14 @@
 <script>
   import Header from '~/pages/header/header.vue'
   import Nav from '~/pages/nav/nav.vue'
+  import Sidebar from '~/pages/sidebar/sidebar.vue'
   import LargeTitle from '../static/LargeTitle.md'
 
   export default {
     components: {
       Header,
-      Nav
+      Nav,
+      Sidebar
     },
     computed: {
       LargeTitle() {
@@ -226,56 +176,6 @@
 .small-article__title {
   font-size: 18px;
   margin-bottom: 15px;
-}
-
-.right-cnt__news {
-  background-color: #F9F9F9;
-  width: 100%;
-}
-
-.right-cnt__news a {
-  text-decoration: none;
-  color: #000;
-}
-
-.news-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding: 10px 0 0 10px;
-  border-top: 2px solid #000;
-}
-
-.right-cnt__news-item {
-  margin-bottom: 20px;
-  padding: 15px 10px;
-}
-
-.news-item__title {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.news-item__info {
-  display: flex;
-  justify-content: flex-start;
-  border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 10px;
-}
-
-.news-date {
-  font-size: 14px;
-  margin-left: 15px;
-}
-
-.news-likes {
-  font-size: 14px;
-  margin-left: 15px;
-}
-
-.news-views {
-  font-size: 14px;
-  margin-left: 15px;
 }
 </style>
 

@@ -1,8 +1,9 @@
 <template>
     <header class="header">
       <div class="header__cnt cnt">
-        <div class="header__logo">
-        </div>
+          <nuxt-link to="/">
+            <div class="header__logo"></div>
+          </nuxt-link>
         <div class="header__search-block">
             <input class="header__search">
             <img class="header__search-icon" src="/header-img/loupe.png">
@@ -45,6 +46,7 @@
         right: 10px;
         top: 50%;
         margin-top: -10px;
+        cursor: pointer;
     }
 
     .header__cnt {
