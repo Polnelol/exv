@@ -67,8 +67,8 @@
                   <cryptoWidget 
                       :name="currency.name" 
                       :price_usd="currency.price_usd" 
+                      :symbol="currency.symbol"
                       :percent_change_24h="currency.percent_change_24h"
-                      :rank="currency.rank"
                   >
                   </cryptoWidget>
               </div>
@@ -120,7 +120,7 @@
                 {title: '8', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2010.png'},
                 {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
                 {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
-            ]
+            ],
         }
   }
   }
@@ -224,7 +224,6 @@
 
 .crypto-logo-wrap {
   min-width: 35px;
-  margin-right: 20px;
 }
 
 
@@ -232,9 +231,11 @@
   margin-bottom: 25px;
   font-size: 16px;
   display: flex;
-  min-height: 42px;
+  min-height: 41px;
   align-items: baseline;
   margin-bottom: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 18px;
 }
 
 .crypto-logo-item img {
@@ -249,6 +250,9 @@
   align-items: center;
   margin-bottom: 15px;
   width: 230px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
 </style>
 
