@@ -226,6 +226,9 @@
   min-width: 35px;
 }
 
+.crypto-info-wrap {
+  width: 100%;
+}
 
 .crypto-logo-item {
   margin-bottom: 25px;
@@ -249,7 +252,6 @@
   min-height: 40px;
   align-items: center;
   margin-bottom: 15px;
-  width: 230px;
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 10px;
   padding-left: 20px;
