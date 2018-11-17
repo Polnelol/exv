@@ -2,7 +2,7 @@
     <header class="header">
       <div class="header__cnt cnt">
           <nuxt-link to="/">
-            <div class="header__logo"></div>
+            <div class="header__logo logo"></div>
           </nuxt-link>
         <div class="header__search-block">
             <input class="header__search">
@@ -17,7 +17,7 @@
         background-color: #1E1E1E;
     }
 
-    .header__logo {
+    .logo {
         width: 150px;
         height: 50px;
         background: url("/header-img/logo.svg") no-repeat center;
@@ -28,8 +28,8 @@
     }
 
     .header__search {
-        width: 300px;
-        height: 40px;
+        width: 250px;
+        height: 30px;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 3px; 
         color: #000;
@@ -37,11 +37,12 @@
         padding: 0 10px;
         border: none;
         padding-right: 45px;
+        margin-bottom: 5px;
     }
 
     .header__search-icon {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         position: absolute;
         right: 10px;
         top: 50%;

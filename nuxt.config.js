@@ -38,17 +38,9 @@ module.exports = {
   /*
   ** Build configuration
   */
-
- css: [
-  { src: 'vue-material/dist/vue-material.min.css', lang: 'css' },
-  { src: '~/assets/theme.scss', lang: 'scss' } // include vue-material theme engine
-],
-plugins: [
-  { src: '~/plugins/vue-material' }
-],
   build: {
 
-    vendor : ['axios"', 'vue-material'],
+    vendor : ['axios'],
     /*
     ** Run ESLint on save
     */

@@ -17,19 +17,19 @@
             <div class="medium-article-wrap">
               <div class="medium-article">
                 <div class="medium-article__img">
-                <img src="">
+                  <img src="">
                 </div>
                 <div class="medium-article__title">Title</div>
                 <div class="medium-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-</div>
+                </div>
               </div>
               <div class="medium-article">
                 <div class="medium-article__img">
-                <img src="">
+                  <img src="">
                 </div>
                 <div class="medium-article__title">Title</div>
                 <div class="medium-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-</div>
+                </div>
               </div>
             </div>
             <div class="small-article-wrap">
@@ -38,51 +38,46 @@
                   <img src="">
                 </div>
                 <div class="small-article__title">Title</div>
-                <div class="small-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.</div>
-              </div>
-              <div class="small-article">
-                <div class="small-article__img">
-                  <img src="">
+                <div class="small-article__description">
+                  Lorem ipsum dolor sit amet, eos in illud malis prodesset, 
+                  eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. 
+                  Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
                 </div>
-                <div class="small-article__title">Title</div>
-                <div class="small-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.</div>
-              </div>
-              <div class="small-article">
-                <div class="small-article__img">
-                  <img src="">
-                </div>
-                <div class="small-article__title">Title</div>
-                <div class="small-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.</div>
               </div>
             </div>
           </div>
           <div class="main-content-right right-cnt">
-            <div class="crypto-logo-wrap">
-              <div v-for="item in items" :key="item.id" class="crypto-logo-item">
-                <img v-bind:src="item.img" v-bind:alt="item.title">
+            <div class="crypto-wrap">
+              <div class="crypto-logo-wrap">
+                <div v-for="item in items" :key="item.id" class="crypto-logo-item">
+                  <img v-bind:src="item.img" v-bind:alt="item.title">
+                </div>
               </div>
-            </div>
-            <div class="crypto-info-wrap">
-              <div v-for="currency in currencies" :key="currency.name" class="crypto-info-item">
-                  <cryptoWidget 
-                      :name="currency.name" 
-                      :price_usd="currency.price_usd" 
-                      :symbol="currency.symbol"
-                      :percent_change_24h="currency.percent_change_24h"
-                  >
-                  </cryptoWidget>
+              <div class="crypto-info-wrap">
+                <div v-for="currency in currencies" :key="currency.name" class="crypto-info-item">
+                    <cryptoWidget 
+                        :name="currency.name" 
+                        :price_usd="currency.price_usd" 
+                        :symbol="currency.symbol"
+                        :percent_change_24h="currency.percent_change_24h"
+                    >
+                    </cryptoWidget>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
+      <Footer/>
     </section>
   </div>
+  
 </template>
 
 <script>
   import Header from '~/pages/header/header.vue'
   import Nav from '~/pages/nav/nav.vue'
+  import Footer from '~/pages/footer/footer.vue'
   import p1 from '../posts/p1.md'
   import CryptoWidget from '~/components/CryptoWidget.vue'
   import axios from "axios"
@@ -92,6 +87,7 @@
     components: {
       Header,
       Nav,
+      Footer,
       CryptoWidget
     },
     computed: {
@@ -152,7 +148,6 @@
 }
 
 .right-cnt {
-  display: flex;
   width: 25%;
 }
 
@@ -166,6 +161,11 @@
   max-height: 320px;
   margin-bottom: 20px;
   background-color: #F9F9F9;
+}
+
+.large-article__img img {
+  width: 100%;
+  height: auto;
 }
 
 .large-article__title {
@@ -192,6 +192,11 @@
   background-color: #F9F9F9;
 }
 
+.medium-article__img img {
+  width: 100%;
+  height: auto;
+}
+
 .medium-article__title {
   font-size: 18px;
   margin-bottom: 15px;
@@ -205,10 +210,7 @@
 
 .small-article {
   width: 32%;
-  height: 130px;
-  max-height: 130px;
   margin-bottom: 15px;
-  background-color: #F9F9F9;
 }
 
 .small-article__img {
@@ -219,9 +221,19 @@
   background-color: #F9F9F9;
 }
 
+.small-article__img img {
+  width: 100%;
+  height: auto;
+}
+
 .small-article__title {
   font-size: 18px;
   margin-bottom: 15px;
+}
+
+.crypto-wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
 .crypto-logo-wrap {
@@ -255,7 +267,7 @@
   align-items: center;
   margin-bottom: 15px;
   border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
   padding-left: 20px;
 }
 </style>
