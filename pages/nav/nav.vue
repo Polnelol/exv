@@ -2,12 +2,12 @@
     <nav class="navbar">
       <div class="navbar__cnt cnt">
         <ul>
-          <li class="navbar__item"><a href="">Лента</a></li>
-          <li class="navbar__item"><a href="">Новости</a></li>
-          <li class="navbar__item"><a href="">Трейдеру</a></li>
-          <li class="navbar__item"><a href="">Крипта</a></li>
+          <li class="navbar__item"><a href="">Home</a></li>
+          <li class="navbar__item"><a href="">News</a></li>
+          <li class="navbar__item"><a href="">Trading</a></li>
+          <li class="navbar__item"><a href="">Crypto</a></li>
           <li class="navbar__item"><a href="">Level 2</a></li>
-          <li class="navbar__item"><a href="">Контакты</a></li>
+          <li class="navbar__item"><a href="">Contact us</a></li>
         </ul>
       </div>
     </nav>
