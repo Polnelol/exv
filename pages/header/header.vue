@@ -14,7 +14,7 @@
 
 <style>
     .header {
-    background-color: #000;
+        background-color: #1E1E1E;
     }
 
     .header__logo {
@@ -51,7 +51,7 @@
 
     .header__cnt {
         color: #fff;
-        height: 60px;
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;

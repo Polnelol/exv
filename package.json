@@ -15,7 +15,11 @@
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.2",
     "axios": "^0.18.0",
+    "file-system": "^2.2.2",
     "markdown-it": "^8.4.2",
+    "markdown-json": "^1.4.0",
+    "markdown-to-json": "^0.5.1",
+    "md-2-json": "^1.0.5",
     "node-sass": "^4.10.0",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.1",

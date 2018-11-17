@@ -20,7 +20,7 @@
         height: 60px;
         background: #f9f9f9;
         border-bottom: 1px solid #e8e8e8;
-        margin-bottom: 30px;
+        margin: 0px 0 30px 0;
     }
 
     .navbar ul {

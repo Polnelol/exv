@@ -10,9 +10,9 @@
               <div class="large-article__img">
                 <img src="">
               </div>
-              <div v-html="LargeTitle" class="large-article__title"></div>
-              <div class="large-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-</div>
+              <div class="large-article__title">{{posts.title}}</div>
+              <div v-html="p1" class="large-article__description">
+              </div>
             </div>
             <div class="medium-article-wrap">
               <div class="medium-article">
@@ -83,10 +83,11 @@
 <script>
   import Header from '~/pages/header/header.vue'
   import Nav from '~/pages/nav/nav.vue'
-  import LargeTitle from '../static/LargeTitle.md'
+  import p1 from '../posts/p1.md'
   import CryptoWidget from '~/components/CryptoWidget.vue'
-  import axios from "axios";
-
+  import axios from "axios"
+  import post from "../posts/post1.json"
+  
   export default {
     components: {
       Header,
@@ -94,8 +95,11 @@
       CryptoWidget
     },
     computed: {
-      LargeTitle() {
-        return LargeTitle
+      p1() {
+        return p1
+      },
+      posts() {
+        return post
       }
     },
     asyncData(){
@@ -124,8 +128,6 @@
         }
   }
   }
-
-
 </script>
 
 <style>
