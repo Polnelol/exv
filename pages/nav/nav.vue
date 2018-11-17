@@ -17,7 +17,7 @@
 
 <style scoped>
     .navbar {
-        height: 60px;
+        height: 50px;
         background: #f9f9f9;
         border-bottom: 1px solid #e8e8e8;
         margin: 0px 0 30px 0;
@@ -33,8 +33,8 @@
 
     .navbar__item {
         margin-right: 25px;
-        height: 60px;
-        line-height: 60px;
+        height: 50px;
+        line-height: 50px;
     }
 
     .navbar__item a {
