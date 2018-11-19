@@ -4,7 +4,7 @@
     <Nav/>    
     <section class="main-content">
       <div class="main-content__cnt cnt">
-        <section class="main-content__primary-news">
+        <section class="main-content__primary-news main-content__primary">
           <div class="main-content-left left-cnt">
             <div class="large-article">
               <div class="large-article__img">
@@ -75,13 +75,16 @@
 </template>
 
 <script>
+  import axios from "axios"
   import Header from '~/pages/header/header.vue'
   import Nav from '~/pages/nav/nav.vue'
   import Footer from '~/pages/footer/footer.vue'
-  import p1 from '../posts/p1.md'
   import CryptoWidget from '~/components/CryptoWidget.vue'
-  import axios from "axios"
+  import '~/assets/main.css'
+  import p1 from '../posts/p1.md'
   import post from "../posts/post1.json"
+  
+
   
   export default {
     components: {
@@ -122,153 +125,11 @@
                 {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
             ],
         }
-  }
+    }
   }
 </script>
 
 <style>
 
-.container {
-}
-
-.cnt {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.main-content__primary-news {
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-cnt {
-  width: 70%;
-}
-
-.right-cnt {
-  width: 25%;
-}
-
-.large-article {
-  margin-bottom: 20px;
-}
-
-.large-article__img {
-  width: 100%;
-  height: 320px;
-  max-height: 320px;
-  margin-bottom: 20px;
-  background-color: #F9F9F9;
-}
-
-.large-article__img img {
-  width: 100%;
-  height: auto;
-}
-
-.large-article__title {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.medium-article-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.medium-article {
-  width: 48%;
-  margin-bottom: 20px;
-}
-
-.medium-article__img {
-  width: 100%;
-  height: 180px;
-  max-height: 180px;
-  margin-bottom: 20px;
-  background-color: #F9F9F9;
-}
-
-.medium-article__img img {
-  width: 100%;
-  height: auto;
-}
-
-.medium-article__title {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.small-article-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.small-article {
-  width: 32%;
-  margin-bottom: 15px;
-}
-
-.small-article__img {
-  width: 100%;
-  height: 180px;
-  max-height: 180px;
-  margin-bottom: 20px;
-  background-color: #F9F9F9;
-}
-
-.small-article__img img {
-  width: 100%;
-  height: auto;
-}
-
-.small-article__title {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.crypto-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-
-.crypto-logo-wrap {
-  min-width: 35px;
-}
-
-.crypto-info-wrap {
-  width: 100%;
-}
-
-.crypto-logo-item {
-  margin-bottom: 25px;
-  font-size: 16px;
-  display: flex;
-  min-height: 41px;
-  align-items: baseline;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 18px;
-}
-
-.crypto-logo-item img {
-  width: 32px;
-  height: 32px;
-}
-
-.crypto-info-item {
-  font-size: 16px;
-  display: flex;
-  min-height: 40px;
-  align-items: center;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 13px;
-  padding-left: 20px;
-}
 </style>
 
