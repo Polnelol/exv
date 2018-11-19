@@ -2,7 +2,7 @@
     <div class="medium-article">
         <nuxt-link :to="'/crypto/' + id">
             <div class="medium-article__img">
-                <img>
+                <img :src="ImgSrc">
             </div>
             <div class="medium-article__title">{{title}}</div>
             <div class="medium-article__description">{{indent}}</div>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    props: ["title", "indent", "id"],
+    props: ["ImgSrc", "title", "indent", "id"],
     
 }
 </script>

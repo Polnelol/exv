@@ -11,6 +11,7 @@
                             <CryptoSingle
                                 v-for="CryptoSingle in CryptoSingles"
                                 :key="CryptoSingle.id"
+                                :ImgSrc="CryptoSingle.ImgSrc"
                                 :title="CryptoSingle.title"
                                 :previewText="CryptoSingle.previewText"
                                 :id="CryptoSingle.id"/>
@@ -74,21 +75,12 @@
       CryptoNews1() {
         return indent1
       },
-      post1() {
-        return post1
-      },
       CryptoNews2() {
         return indent2
       },
-      post2() {
-        return post2
-      },
       CryptoNews3() {
         return indent3
-      },
-      post3() {
-        return post3
-      },
+      }
     },
     asyncData(){
         return axios
@@ -114,17 +106,17 @@
                 {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
             ],
             CryptoSingles: [
-                        {
+                        {   ImgSrc: post1.ImgSrc,
                             id: "1",
                             title: post1.title,
                             indent: post1.indent
                         },
-                        {
+                        {   ImgSrc: post2.ImgSrc,
                             id: "2",
                             title: post2.title,
                             indent: post2.indent
                         },
-                        {
+                        {   ImgSrc: post3.ImgSrc,
                             id: "3",
                             title: post3.title,
                             indent: post3.indent

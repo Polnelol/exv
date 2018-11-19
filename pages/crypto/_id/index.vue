@@ -2,6 +2,7 @@
     <section>
         <h1>{{ CryptoSingle.title }}</h1>
         <p>{{CryptoSingle.indent}}</p>
+        <img :src="CryptoSingle.ImgSrc">
     </section>
 </template>
 <script>
@@ -40,17 +41,19 @@ export default {
         return new Promise((resolve, reject) => {
                 resolve({
                    CryptoSingle: [
-                       {
+                       {    ImgSrc: post1.ImgSrc,
                             id: "1",
                             title: post1.title,
                             indent: post1.indent
                         },
                         {
+                            ImgSrc: post2.ImgSrc,
                             id: "2",
                             title: post2.title,
                             indent: post2.indent
                         },
                         {
+                            ImgSrc: post3.ImgSrc,
                             id: "3",
                             title: post3.title,
                             indent: post3.indent
