@@ -55,6 +55,9 @@
   import p1 from '~/posts/p1.md'
   import p2 from '~/posts/p2.md'
   import post1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
+  import indent1 from "~/posts/crypto/crypto-news1/crypto-news1.md"
+  import indent2 from "~/posts/crypto/crypto-news2/crypto-news2.md"
+  import indent3 from "~/posts/crypto/crypto-news3/crypto-news3.md"
   import post2 from "~/posts/crypto/crypto-news2/crypto-news2.json"
   import post3 from "~/posts/crypto/crypto-news3/crypto-news3.json"
   
@@ -69,16 +72,19 @@
       CryptoSingle,
       post1,
       post2,
-      post3
+      post3,
+      indent1,
+      indent2,
+      indent3
     },
     computed: {
-      CryptoNews1() {
+      indent1() {
         return indent1
       },
-      CryptoNews2() {
+      indent2() {
         return indent2
       },
-      CryptoNews3() {
+      indent3() {
         return indent3
       }
     },
