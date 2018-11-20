@@ -7,7 +7,8 @@
         <div class="single-page-title">{{ Level2Single.title }}</div>
         <div class="single-page-date">{{ Level2Single.date }}</div>
         <div class="single-page-img">
-          <img :src="Level2Single.ImgSrc">
+          <img v-if="Level2Single.ImgSrc" :src="Level2Single.ImgSrc" :key="Level2Single.ImgSrc">
+          <img v-else :key="Level2Single.ImgSrc">
         </div>
         <div class="single-page-indent" v-html="Level2Single.indent"></div>
       </div>

@@ -6,8 +6,9 @@
       <div class="main-content__cnt cnt">
         <div class="single-page-title">{{ NewsSingle.title }}</div>
         <div class="single-page-date">{{ NewsSingle.date }}</div>
-        <div class="single-page-img">
-          <img :src="NewsSingle.ImgSrc">
+        <div class="single-page-img" >
+          <img v-if="NewsSingle.ImgSrc" :src="NewsSingle.ImgSrc" :key="NewsSingle.ImgSrc">
+          <img v-else :key="NewsSingle.ImgSrc">
         </div>
         <div class="single-page-indent" v-html="NewsSingle.indent"></div>
       </div>

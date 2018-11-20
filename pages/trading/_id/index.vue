@@ -7,7 +7,8 @@
         <div class="single-page-title">{{ TradingSingle.title }}</div>
         <div class="single-page-date">{{ TradingSingle.date }}</div>
         <div class="single-page-img">
-          <img :src="TradingSingle.ImgSrc">
+          <img v-if="TradingSingle.ImgSrc" :src="TradingSingle.ImgSrc" :key="TradingSingle.ImgSrc">
+          <img v-else :key="TradingSingle.ImgSrc">
         </div>
         <div class="single-page-indent" v-html="TradingSingle.indent"></div>
       </div>
