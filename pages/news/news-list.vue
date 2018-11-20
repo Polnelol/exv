@@ -4,33 +4,17 @@
         <Nav/>
         <section class="main-content">
             <div class="main-content__cnt cnt">
+                <div class="section-title">News</div>
                 <section class="main-content__primary">
                     <div class="main-content-left left-cnt">
                         <div class="medium-article-wrap">
-                            <div class="medium-article">
-                                <div class="medium-article__img">
-                                <img src="">
-                                </div>
-                                <div class="medium-article__title">Title</div>
-                                <div class="medium-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-                                </div>
-                            </div>
-                            <div class="medium-article">
-                                <div class="medium-article__img">
-                                <img src="">
-                                </div>
-                                <div class="medium-article__title">Title</div>
-                                <div class="medium-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-                                </div>
-                            </div>
-                            <div class="medium-article">
-                                <div class="medium-article__img">
-                                <img src="">
-                                </div>
-                                <div class="medium-article__title">Title</div>
-                                <div class="medium-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-                                </div>
-                            </div>
+                            <NewsSingle
+                                v-for="NewsSingle in NewsSingles"
+                                :key="NewsSingle.id"
+                                :ImgSrc="NewsSingle.ImgSrc"
+                                :title="NewsSingle.title"
+                                :previewText="NewsSingle.previewText"
+                                :id="NewsSingle.id"/>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">
@@ -61,12 +45,19 @@
 </template>
 
 <script>
+  import axios from "axios"
   import Header from '~/pages/header/header.vue'
   import Nav from '~/pages/nav/nav.vue'
   import Footer from '~/pages/footer/footer.vue'
   import CryptoWidget from '~/components/CryptoWidget.vue'
+  import NewsSingle from '~/components/news-single.vue'
   import '~/assets/main.css'
-  import axios from "axios"
+  import post1 from "~/posts/news/news1/news1.json"
+  import post2 from "~/posts/news/news2/news2.json"
+  import post3 from "~/posts/news/news3/news3.json"
+  import indent1 from "~/posts/news/news1/news1.md"
+  import indent2 from "~/posts/news/news2/news2.md"
+  import indent3 from "~/posts/news/news3/news3.md"
   
   
 
@@ -75,7 +66,25 @@
       Header,
       Nav,
       Footer,
-      CryptoWidget
+      CryptoWidget,
+      NewsSingle,
+      post1,
+      post2,
+      post3,
+      indent1,
+      indent2,
+      indent3
+    },
+    computed: {
+      indent1() {
+        return indent1
+      },
+      indent2() {
+        return indent2
+      },
+      indent3() {
+        return indent3
+      }
     },
     asyncData(){
         return axios
@@ -100,6 +109,23 @@
                 {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
                 {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
             ],
+            NewsSingles: [
+                        {   ImgSrc: post1.ImgSrc,
+                            id: "1",
+                            title: post1.title,
+                            indent: post1.indent
+                        },
+                        {   ImgSrc: post2.ImgSrc,
+                            id: "2",
+                            title: post2.title,
+                            indent: post2.indent
+                        },
+                        {   ImgSrc: post3.ImgSrc,
+                            id: "3",
+                            title: post3.title,
+                            indent: post3.indent
+                        }
+                    ]
         }
     }
   }

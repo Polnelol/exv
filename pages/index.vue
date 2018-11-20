@@ -68,8 +68,8 @@
           </div>
         </section>
       </div>
-      <Footer/>
     </section>
+    <Footer/>
   </div>
   
 </template>

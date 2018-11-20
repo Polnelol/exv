@@ -4,12 +4,12 @@
     <Nav/>
     <section class="main-content">
       <div class="main-content__cnt cnt">
-        <div class="single-page-title">{{ CryptoSingle.title }}</div>
-        <div class="single-page-date">{{ CryptoSingle.date }}</div>
+        <div class="single-page-title">{{ TradingSingle.title }}</div>
+        <div class="single-page-date">{{ TradingSingle.date }}</div>
         <div class="single-page-img">
-          <img :src="CryptoSingle.ImgSrc">
+          <img :src="TradingSingle.ImgSrc">
         </div>
-        <div class="single-page-indent" v-html="CryptoSingle.indent"></div>
+        <div class="single-page-indent" v-html="TradingSingle.indent"></div>
       </div>
     </section>
     <Footer/>
@@ -20,12 +20,12 @@ import '~/assets/main.css'
 import Header from '~/pages/header/header.vue'
 import Nav from '~/pages/nav/nav.vue'
 import Footer from '~/pages/footer/footer.vue'
-import post1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
-import indent1 from "~/posts/crypto/crypto-news1/crypto-news1.md"
-import post2 from "~/posts/crypto/crypto-news2/crypto-news2.json"
-import indent2 from "~/posts/crypto/crypto-news2/crypto-news2.md"
-import post3 from "~/posts/crypto/crypto-news3/crypto-news3.json"
-import indent3 from "~/posts/crypto/crypto-news3/crypto-news3.md"
+import post1 from "~/posts/trading/trading-news1/trading-news1.json"
+import indent1 from "~/posts/trading/trading-news1/trading-news1.md"
+import post2 from "~/posts/trading/trading-news2/trading-news2.json"
+import indent2 from "~/posts/trading/trading-news2/trading-news2.md"
+import post3 from "~/posts/trading/trading-news3/trading-news3.json"
+import indent3 from "~/posts/trading/trading-news3/trading-news3.md"
 
 export default {
     components: {
@@ -62,7 +62,7 @@ export default {
     asyncData(context) {
         return new Promise((resolve, reject) => {
                 resolve({
-                   CryptoSingle: [
+                   TradingSingle: [
                        {    ImgSrc: post1.ImgSrc,
                             id: "1",
                             title: post1.title,

@@ -52,14 +52,12 @@
   import CryptoWidget from '~/components/CryptoWidget.vue'
   import CryptoSingle from '~/components/crypto-single.vue'
   import '~/assets/main.css'
-  import p1 from '~/posts/p1.md'
-  import p2 from '~/posts/p2.md'
   import post1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
+  import post2 from "~/posts/crypto/crypto-news2/crypto-news2.json"
+  import post3 from "~/posts/crypto/crypto-news3/crypto-news3.json"
   import indent1 from "~/posts/crypto/crypto-news1/crypto-news1.md"
   import indent2 from "~/posts/crypto/crypto-news2/crypto-news2.md"
   import indent3 from "~/posts/crypto/crypto-news3/crypto-news3.md"
-  import post2 from "~/posts/crypto/crypto-news2/crypto-news2.json"
-  import post3 from "~/posts/crypto/crypto-news3/crypto-news3.json"
   
   
 

@@ -1,6 +1,6 @@
 <template>
     <div class="medium-article">
-        <nuxt-link :to="'/crypto/' + id">
+        <nuxt-link :to="'/trading/' + id">
             <div class="medium-article__img">
                 <img :src="ImgSrc">
             </div>
