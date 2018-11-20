@@ -6,43 +6,60 @@
       <div class="main-content__cnt cnt">
         <section class="main-content__primary-news main-content__primary">
           <div class="main-content-left left-cnt">
-            <div class="large-article">
-              <div class="large-article__img">
-                <img src="">
-              </div>
-              <div class="large-article__title">{{posts.title}}</div>
-              <div v-html="p1" class="large-article__description">
-              </div>
-            </div>
+            <Level2Single1
+              v-for="Level2Single1 in Level2Singles1"
+              :key="Level2Single1.id"
+              :ImgSrc="Level2Single1.ImgSrc"
+              :title="Level2Single1.title"
+              :previewText="Level2Single1.previewText"
+              :id="Level2Single1.id"/>
             <div class="medium-article-wrap">
               <div class="medium-article">
-                <div class="medium-article__img">
-                  <img src="">
-                </div>
-                <div class="medium-article__title">Title</div>
-                <div class="medium-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-                </div>
+                <Level2Single2
+                  v-for="Level2Single2 in Level2Singles2"
+                  :key="Level2Single2.id"
+                  :ImgSrc="Level2Single2.ImgSrc"
+                  :title="Level2Single2.title"
+                  :previewText="Level2Single2.previewText"
+                  :id="Level2Single2.id"/>
               </div>
               <div class="medium-article">
-                <div class="medium-article__img">
-                  <img src="">
-                </div>
-                <div class="medium-article__title">Title</div>
-                <div class="medium-article__description">Lorem ipsum dolor sit amet, eos in illud malis prodesset, eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-                </div>
+                <Level2Single3
+                  v-for="Level2Single3 in Level2Singles3"
+                  :key="Level2Single3.id"
+                  :ImgSrc="Level2Single3.ImgSrc"
+                  :title="Level2Single3.title"
+                  :previewText="Level2Single3.previewText"
+                  :id="Level2Single3.id"/>
               </div>
             </div>
             <div class="small-article-wrap">
               <div class="small-article">
-                <div class="small-article__img">
-                  <img src="">
-                </div>
-                <div class="small-article__title">Title</div>
-                <div class="small-article__description">
-                  Lorem ipsum dolor sit amet, eos in illud malis prodesset, 
-                  eum legendos rationibus no. Vel dico mazim essent ut, pro te quot altera. 
-                  Explicari argumentum ex pri. Populo nusquam fastidii pri te. Cu cum prima solet tantas.
-                </div>
+                <CryptoSingle1
+                  v-for="CryptoSingle1 in CryptoSingles1"
+                  :key="CryptoSingle1.id"
+                  :ImgSrc="CryptoSingle1.ImgSrc"
+                  :title="CryptoSingle1.title"
+                  :previewText="CryptoSingle1.previewText"
+                  :id="CryptoSingle1.id"/>
+              </div>
+              <div class="small-article">
+                <TradingSingle1
+                  v-for="TradingSingle1 in TradingSingles1"
+                  :key="TradingSingle1.id"
+                  :ImgSrc="TradingSingle1.ImgSrc"
+                  :title="TradingSingle1.title"
+                  :previewText="TradingSingle1.previewText"
+                  :id="TradingSingle1.id"/>
+              </div>
+              <div class="small-article">
+                <TradingSingle2
+                  v-for="TradingSingle2 in TradingSingles2"
+                  :key="TradingSingle2.id"
+                  :ImgSrc="TradingSingle2.ImgSrc"
+                  :title="TradingSingle2.title"
+                  :previewText="TradingSingle2.previewText"
+                  :id="TradingSingle2.id"/>
               </div>
             </div>
           </div>
@@ -80,9 +97,20 @@
   import Nav from '~/pages/nav/nav.vue'
   import Footer from '~/pages/footer/footer.vue'
   import CryptoWidget from '~/components/CryptoWidget.vue'
+  import Level2Single1 from '~/components/level2-single.vue'
+  import Level2Single2 from '~/components/level2-single.vue'
+  import Level2Single3 from '~/components/level2-single.vue'
+  import CryptoSingle1 from '~/components/crypto-single.vue'
+  import TradingSingle1 from '~/components/trading-single.vue'
+  import TradingSingle2 from '~/components/trading-single.vue'
+  import LargePost1 from "~/posts/level2/level2-news1/level2-news1.json"
+  import MediumPost1 from "~/posts/level2/level2-news2/level2-news2.json"
+  import MediumPost2 from "~/posts/level2/level2-news3/level2-news3.json"
+  import SmallPost1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
+  import SmallPost2 from "~/posts/trading/trading-news1/trading-news1.json"
+  import SmallPost3 from "~/posts/trading/trading-news2/trading-news2.json"
   import '~/assets/main.css'
-  import p1 from '../posts/p1.md'
-  import post from "../posts/post1.json"
+  
   
 
   
@@ -91,7 +119,13 @@
       Header,
       Nav,
       Footer,
-      CryptoWidget
+      CryptoWidget,
+      Level2Single1,
+      Level2Single2,
+      Level2Single3,
+      CryptoSingle1,
+      TradingSingle1,
+      TradingSingle2
     },
     computed: {
       p1() {
@@ -124,12 +158,60 @@
                 {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
                 {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
             ],
+            Level2Singles1: [
+                        {   ImgSrc: LargePost1.ImgSrc,
+                            id: "1",
+                            title: LargePost1.title,
+                            indent: LargePost1.indent
+                        }
+                    ],
+            Level2Singles2: [
+                        {   ImgSrc: MediumPost1.ImgSrc,
+                            id: "2",
+                            title: MediumPost1.title,
+                            indent: MediumPost1.indent
+                        }
+                    ],
+            Level2Singles3: [
+                        {   ImgSrc: MediumPost2.ImgSrc,
+                            id: "3",
+                            title: MediumPost2.title,
+                            indent: MediumPost2.indent
+                        }
+                    ],
+            CryptoSingles1: [
+                        {   ImgSrc: SmallPost1.ImgSrc,
+                            id: "1",
+                            title: SmallPost1.title,
+                            indent: SmallPost1.indent
+                        }
+                    ],
+            TradingSingles1: [
+                        {   ImgSrc: SmallPost2.ImgSrc,
+                            id: "1",
+                            title: SmallPost2.title,
+                            indent: SmallPost2.indent
+                        }
+                    ],
+            TradingSingles2: [
+                        {   ImgSrc: SmallPost3.ImgSrc,
+                            id: "2",
+                            title: SmallPost3.title,
+                            indent: SmallPost3.indent
+                        }
+                    ]
         }
     }
   }
 </script>
 
-<style>
+<style scoped>
+  .medium-article {
+    width: 48%;
+  }
 
+  .medium-article a {
+    width: 100%;
+  }
 </style>
 

@@ -8,13 +8,15 @@
                 <section class="main-content__primary">
                     <div class="main-content-left left-cnt">
                         <div class="medium-article-wrap">
-                            <CryptoSingle
-                                v-for="CryptoSingle in CryptoSingles"
-                                :key="CryptoSingle.id"
-                                :ImgSrc="CryptoSingle.ImgSrc"
-                                :title="CryptoSingle.title"
-                                :previewText="CryptoSingle.previewText"
-                                :id="CryptoSingle.id"/>
+                            <div class="medium-article">
+                                <CryptoSingle
+                                    v-for="CryptoSingle in CryptoSingles"
+                                    :key="CryptoSingle.id"
+                                    :ImgSrc="CryptoSingle.ImgSrc"
+                                    :title="CryptoSingle.title"
+                                    :previewText="CryptoSingle.previewText"
+                                    :id="CryptoSingle.id"/>
+                            </div>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">

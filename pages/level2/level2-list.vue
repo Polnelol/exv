@@ -8,13 +8,15 @@
                 <section class="main-content__primary">
                     <div class="main-content-left left-cnt">
                         <div class="medium-article-wrap">
-                            <Level2Single
-                                v-for="Level2Single in Level2Singles"
-                                :key="Level2Single.id"
-                                :ImgSrc="Level2Single.ImgSrc"
-                                :title="Level2Single.title"
-                                :previewText="Level2Single.previewText"
-                                :id="Level2Single.id"/>
+                            <div class="medium-article">
+                                <Level2Single
+                                    v-for="Level2Single in Level2Singles"
+                                    :key="Level2Single.id"
+                                    :ImgSrc="Level2Single.ImgSrc"
+                                    :title="Level2Single.title"
+                                    :previewText="Level2Single.previewText"
+                                    :id="Level2Single.id"/>
+                            </div>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">

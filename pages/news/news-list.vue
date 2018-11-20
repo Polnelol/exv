@@ -8,13 +8,15 @@
                 <section class="main-content__primary">
                     <div class="main-content-left left-cnt">
                         <div class="medium-article-wrap">
-                            <NewsSingle
-                                v-for="NewsSingle in NewsSingles"
-                                :key="NewsSingle.id"
-                                :ImgSrc="NewsSingle.ImgSrc"
-                                :title="NewsSingle.title"
-                                :previewText="NewsSingle.previewText"
-                                :id="NewsSingle.id"/>
+                            <div class="medium-article">
+                                <NewsSingle
+                                    v-for="NewsSingle in NewsSingles"
+                                    :key="NewsSingle.id"
+                                    :ImgSrc="NewsSingle.ImgSrc"
+                                    :title="NewsSingle.title"
+                                    :previewText="NewsSingle.previewText"
+                                    :id="NewsSingle.id"/>
+                            </div>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">

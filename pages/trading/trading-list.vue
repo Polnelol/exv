@@ -8,13 +8,15 @@
                 <section class="main-content__primary">
                     <div class="main-content-left left-cnt">
                         <div class="medium-article-wrap">
-                            <TradingSingle
-                                v-for="TradingSingle in TradingSingles"
-                                :key="TradingSingle.id"
-                                :ImgSrc="TradingSingle.ImgSrc"
-                                :title="TradingSingle.title"
-                                :previewText="TradingSingle.previewText"
-                                :id="TradingSingle.id"/>
+                            <div class="medium-article">
+                                <TradingSingle
+                                    v-for="TradingSingle in TradingSingles"
+                                    :key="TradingSingle.id"
+                                    :ImgSrc="TradingSingle.ImgSrc"
+                                    :title="TradingSingle.title"
+                                    :previewText="TradingSingle.previewText"
+                                    :id="TradingSingle.id"/>
+                            </div>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">

@@ -1,15 +1,13 @@
 <template>
-    <div class="medium-article">
-        <nuxt-link :to="'/crypto/' + id">
-            <div class="medium-article__img">
-                <img v-if="ImgSrc" :src="ImgSrc" :key="ImgSrc">
-                <img v-else :key="ImgSrc">
-            </div>
-            <div class="medium-article__title">{{title}}</div>
-            <div class="medium-article__description">{{indent}}</div>
-            <div class="medium-article__description">{{date}}</div>
-        </nuxt-link>
-    </div>
+    <nuxt-link :to="'/crypto/' + id">
+        <div class="medium-article__img">
+            <img v-if="ImgSrc" :src="ImgSrc" :key="ImgSrc">
+            <img v-else :key="ImgSrc">
+        </div>
+        <div class="medium-article__title">{{title}}</div>
+        <div class="medium-article__description">{{indent}}</div>
+        <div class="medium-article__description">{{date}}</div>
+    </nuxt-link>
 </template>
 
 <script>
