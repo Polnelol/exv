@@ -6,7 +6,7 @@
                 <li class="navbar__item"><nuxt-link to="/news/news-list">News</nuxt-link></li>
                 <li class="navbar__item"><nuxt-link to="/trading/trading-list">Trading</nuxt-link></li>
                 <li class="navbar__item"><nuxt-link to="/crypto/crypto-list">Crypto</nuxt-link></li>
-                <li class="navbar__item"><nuxt-link to="/level/level-list">Level</nuxt-link> </li>
+                <li class="navbar__item"><nuxt-link to="/level2/level2-list">Level2</nuxt-link> </li>
                 <li class="navbar__item"><nuxt-link to="/contact/convact">Contact us</nuxt-link></li>
             </ul>
         </div>
