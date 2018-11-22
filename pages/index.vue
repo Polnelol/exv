@@ -11,7 +11,6 @@
               :key="Level2Single1.id"
               :ImgSrc="Level2Single1.ImgSrc"
               :title="Level2Single1.title"
-              :previewText="Level2Single1.previewText"
               :id="Level2Single1.id"/>
             <div class="medium-article-wrap">
               <div class="medium-article">
@@ -20,7 +19,6 @@
                   :key="Level2Single2.id"
                   :ImgSrc="Level2Single2.ImgSrc"
                   :title="Level2Single2.title"
-                  :previewText="Level2Single2.previewText"
                   :id="Level2Single2.id"/>
               </div>
               <div class="medium-article">
@@ -29,7 +27,6 @@
                   :key="Level2Single3.id"
                   :ImgSrc="Level2Single3.ImgSrc"
                   :title="Level2Single3.title"
-                  :previewText="Level2Single3.previewText"
                   :id="Level2Single3.id"/>
               </div>
             </div>
@@ -40,7 +37,6 @@
                   :key="CryptoSingle1.id"
                   :ImgSrc="CryptoSingle1.ImgSrc"
                   :title="CryptoSingle1.title"
-                  :previewText="CryptoSingle1.previewText"
                   :id="CryptoSingle1.id"/>
               </div>
               <div class="small-article">
@@ -49,7 +45,6 @@
                   :key="TradingSingle1.id"
                   :ImgSrc="TradingSingle1.ImgSrc"
                   :title="TradingSingle1.title"
-                  :previewText="TradingSingle1.previewText"
                   :id="TradingSingle1.id"/>
               </div>
               <div class="small-article">
@@ -58,7 +53,7 @@
                   :key="TradingSingle2.id"
                   :ImgSrc="TradingSingle2.ImgSrc"
                   :title="TradingSingle2.title"
-                  :previewText="TradingSingle2.previewText"
+
                   :id="TradingSingle2.id"/>
               </div>
             </div>
@@ -115,6 +110,7 @@
 
   
   export default {
+    
     components: {
       Header,
       Nav,
@@ -126,14 +122,6 @@
       CryptoSingle1,
       TradingSingle1,
       TradingSingle2
-    },
-    computed: {
-      p1() {
-        return p1
-      },
-      posts() {
-        return post
-      }
     },
     asyncData(){
         return axios

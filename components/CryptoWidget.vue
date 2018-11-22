@@ -40,12 +40,4 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-
-.positive-value {
-
-}
-
-.negative-value {
-
-}
 </style>
