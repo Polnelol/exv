@@ -2,7 +2,7 @@
     <div class="crypto-wrapper">
       <div class="crypto-wrapper__top">
         <span class="crypto-name">{{name}}</span>
-        <span class="crypto-price">${{price_usd}}</span>
+        <span class="crypto-price">${{price_usd.substring(0,7)}}</span>
       </div>
       <div class="crypto-wrapper__bottom">
         <span class="crypto-rank">{{symbol}}</span>
