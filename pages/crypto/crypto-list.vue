@@ -1,7 +1,6 @@
 <template>
     <div class="container">
         <Header/> 
-        <Nav/>
         <section class="main-content">
             <div class="main-content__cnt cnt">
                 <div class="section-title">Crypto</div>
@@ -49,7 +48,6 @@
 <script>
   import axios from "axios"
   import Header from '~/pages/header/header.vue'
-  import Nav from '~/pages/nav/nav.vue'
   import Footer from '~/pages/footer/footer.vue'
   import CryptoWidget from '~/components/CryptoWidget.vue'
   import CryptoSingle from '~/components/crypto-single.vue'
@@ -66,7 +64,6 @@
   export default {
     components: {
       Header,
-      Nav,
       Footer,
       CryptoWidget,
       CryptoSingle,
