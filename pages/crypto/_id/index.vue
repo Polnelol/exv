@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <Header/>
-    <Nav/>
     <section class="main-content">
       <div class="main-content__cnt cnt">
         <div class="single-page-title">{{ CryptoSingle.title }}</div>
@@ -18,7 +17,6 @@
 <script>
 import '~/assets/main.css'
 import Header from '~/pages/header/header.vue'
-import Nav from '~/pages/nav/nav.vue'
 import Footer from '~/pages/footer/footer.vue'
 import post1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
 import indent1 from "~/posts/crypto/crypto-news1/crypto-news1.md"
@@ -30,7 +28,6 @@ import indent3 from "~/posts/crypto/crypto-news3/crypto-news3.md"
 export default {
     components: {
       Header,
-      Nav,
       Footer,
       post1,
       post2,
