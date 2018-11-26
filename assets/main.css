@@ -188,10 +188,6 @@
   .right-cnt {
     width: 100%;
   }
-
-  .medium-article__title {
-    font-size: 12px;
-  }
   
   .main-content {
     width: 100% !important;
@@ -203,5 +199,11 @@
 
   .small-article-wrap {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 550px) {
+    .medium-article__title {
+      font-size: 12px;
+    }
   }
 }

@@ -9,10 +9,10 @@
                     <input class="subscribe-input" type="text" placeholder="Enter your email">
                     <input class="subscribe-btn" type="button" value="Subscribe">
                 </form>
-                <div class="subscribe-social">
-                    <a class="subscrive-social-item fb-social"></a>
-                    <a class="subscrive-social-item tw-social"></a>
-                </div>
+            </div>
+            <div class="subscribe-social">
+                <a class="subscrive-social-item fb-social"></a>
+                <a class="subscrive-social-item tw-social"></a>
             </div>
         </div>
     </footer>
@@ -24,7 +24,7 @@
 
 <style>
     .footer {
-        background-color: #535353;
+        background-color: #131C22;
         padding: 15px 0 15px 0;
         margin-top: 20px;
     }
@@ -36,10 +36,10 @@
     }
 
     .footer-logo {
-        width: 200px;
+        width: 150px;
         height: 50px;
-        margin-left: 100px;
-        background: url("/header-img/logo.svg") no-repeat center;
+        background: url("/footer-img/footer-logo.png") no-repeat center;
+        background-size: cover;
     }
 
     .subscribe {
