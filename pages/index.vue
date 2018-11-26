@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <Header/> 
-    <Nav/>    
+    <Header/>   
     <section class="main-content">
       <div class="main-content__cnt cnt">
         <section class="main-content__primary-news main-content__primary">
@@ -89,7 +88,6 @@
 <script>
   import axios from "axios"
   import Header from '~/pages/header/header.vue'
-  import Nav from '~/pages/nav/nav.vue'
   import Footer from '~/pages/footer/footer.vue'
   import CryptoWidget from '~/components/CryptoWidget.vue'
   import Level2Single1 from '~/components/level2-single.vue'
@@ -113,7 +111,6 @@
     
     components: {
       Header,
-      Nav,
       Footer,
       CryptoWidget,
       Level2Single1,

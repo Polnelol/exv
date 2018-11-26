@@ -179,3 +179,33 @@
 .single-page-indent {
   font-size: 20px;
 }
+
+@media (max-width: 850px) {
+  .main-content__primary {
+    display: block;
+  }
+
+  .left-cnt {
+    width: 100%;
+  }
+
+  .right-cnt {
+    width: 100%;
+  }
+
+  .medium-article__title {
+    font-size: 16px;
+  }
+  
+  .main-content {
+    width: 100% !important;
+  }
+
+  .single-page-indent {
+    font-size: 18px;
+  }
+
+  .small-article-wrap {
+    margin-bottom: 20px;
+  }
+}

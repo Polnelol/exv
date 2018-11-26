@@ -43,6 +43,13 @@
         font-size: 16px;
         color: #000;
         text-transform: uppercase;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+
+    @media (max-width: 850px) {
+        .navbar {
+            display: none;
+        }
     }
 </style>

@@ -37,7 +37,9 @@
 
     .footer-logo {
         width: 200px;
+        height: 50px;
         margin-left: 100px;
+        background: url("/header-img/logo.svg") no-repeat center;
     }
 
     .subscribe {
@@ -128,5 +130,28 @@
         border: 2px solid #41ABE1;
         background: url("/social-img/tw-icon-white.png") no-repeat center;
         background-color: #41ABE1;
+    }
+
+    @media (max-width: 850px) {
+        .footer__cnt {
+            display: block;
+        }
+
+        .footer-logo {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-input {
+            margin-bottom: 10px;
+        }
+
+        .subscribe-title {
+            font-size: 20px;
+        }
+
+        .subscribe-description {
+            font-size: 16px;
+        }
     }
 </style>
