@@ -129,14 +129,11 @@
 }
 
 .crypto-logo-item {
-  margin-bottom: 25px;
   font-size: 16px;
   display: flex;
-  min-height: 41px;
-  align-items: baseline;
-  margin-bottom: 15px;
+  align-items: center;
   border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 18px;
+  height: 60px;
 }
 
 .crypto-logo-item img {
@@ -147,12 +144,11 @@
 .crypto-info-item {
   font-size: 16px;
   display: flex;
-  min-height: 40px;
   align-items: center;
-  margin-bottom: 15px;
   border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 13px;
-  padding-left: 20px;
+  height: 60px;
+  padding-left: 15px;
+
 }
 
 .section-title {
