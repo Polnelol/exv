@@ -11,8 +11,10 @@
                 </form>
             </div>
             <div class="subscribe-social">
-                <a class="subscrive-social-item fb-social"></a>
-                <a class="subscrive-social-item tw-social"></a>
+                <a class="subscrive-social-item fb-social" href="https://www.facebook.com/level2exchange"></a>
+                <a class="subscrive-social-item tw-social" href="https://twitter.com/level2X"></a>
+                <a class="subscrive-social-item md-social" href="https://medium.com/level2exchange"></a>
+                <a class="subscrive-social-item in-social" href="https://www.linkedin.com/company/level2exchange/"></a>
             </div>
         </div>
     </footer>
@@ -127,9 +129,28 @@
     }
 
     .tw-social:hover {
-        border: 2px solid #41ABE1;
         background: url("/social-img/tw-icon-white.png") no-repeat center;
         background-color: #41ABE1;
+    }
+
+    .in-social {
+        border: 2px solid #0274B3;
+        background: url("/social-img/in-icon-blue.png") no-repeat center;
+    }
+
+    .in-social:hover {
+        background: url("/social-img/in-icon-white.png") no-repeat center;
+        background-color: #0274B3;
+    }
+
+    .md-social {
+        border: 2px solid #FFF;
+        background: url("/social-img/md-icon-white.png") no-repeat center;
+    }
+
+    .md-social:hover {
+        background: url("/social-img/md-icon-black.png") no-repeat center;
+        background-color: #fff;
     }
 
     @media (max-width: 850px) {
