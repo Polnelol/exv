@@ -151,6 +151,11 @@
 
 }
 
+.crypto-info-item:nth-child(odd),
+.crypto-logo-item:nth-child(odd) {
+  background: #fafafa;
+}
+
 .section-title {
     font-size: 30px;
     margin-bottom: 30px;
