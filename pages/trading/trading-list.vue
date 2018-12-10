@@ -14,7 +14,8 @@
                                     :ImgSrc="TradingSingle.ImgSrc"
                                     :title="TradingSingle.title"
                                     :previewText="TradingSingle.previewText"
-                                    :id="TradingSingle.id"/>
+                                    :id="TradingSingle.id"
+                                    :date="TradingSingle.date"/>
                             </div>
                         </div>
                     </div>
@@ -98,31 +99,34 @@
         return {
             items: [
                 {title: '1', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1.png'},
-                {title: '2', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png'},
-                {title: '3', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/52.png'},
-                {title: '4', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1831.png'},
-                {title: '5', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/512.png'},
-                {title: '6', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png'},
-                {title: '7', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2.png'},
-                {title: '8', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2010.png'},
-                {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
-                {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
+                {title: '2', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/52.png'},
+                {title: '3', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png'},
+                {title: '4', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/512.png'},
+                {title: '5', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1831.png'},
+                {title: '6', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
+                {title: '7', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png'},
+                {title: '8', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/3602.png'},
+                {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2.png'},
+                {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1958.png'}
             ],
             TradingSingles: [
                         {   ImgSrc: post1.ImgSrc,
                             id: "1",
                             title: post1.title,
-                            indent: post1.indent
+                            indent: post1.indent,
+                            date: post1.date
                         },
                         {   ImgSrc: post2.ImgSrc,
                             id: "2",
                             title: post2.title,
-                            indent: post2.indent
+                            indent: post2.indent,
+                            date: post2.date
                         },
                         {   ImgSrc: post3.ImgSrc,
                             id: "3",
                             title: post3.title,
-                            indent: post3.indent
+                            indent: post3.indent,
+                            date: post3.date
                         }
                     ]
         }
@@ -132,6 +136,11 @@
 
 
 <style>
+.medium-article__description {
+    color: #A2A2A2;
+    font-size: 13px;
+    margin-top: -10px;
+}
 </style>
 
 

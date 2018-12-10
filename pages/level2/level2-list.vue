@@ -98,15 +98,15 @@
         return {
             items: [
                 {title: '1', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1.png'},
-                {title: '2', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png'},
-                {title: '3', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/52.png'},
-                {title: '4', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1831.png'},
-                {title: '5', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/512.png'},
-                {title: '6', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png'},
-                {title: '7', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2.png'},
-                {title: '8', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2010.png'},
-                {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
-                {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png'}
+                {title: '2', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/52.png'},
+                {title: '3', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png'},
+                {title: '4', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/512.png'},
+                {title: '5', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1831.png'},
+                {title: '6', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/825.png'},
+                {title: '7', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png'},
+                {title: '8', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/3602.png'},
+                {title: '9', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/2.png'},
+                {title: '10', img: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1958.png'}
             ],
             Level2Singles: [
                         {   ImgSrc: post1.ImgSrc,
