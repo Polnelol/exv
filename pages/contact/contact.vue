@@ -3,7 +3,16 @@
     <Header/> 
     <section class="main-content">
       <div class="main-content__cnt cnt">
-        Contact us
+        <div class="main-content-left left-cnt">
+          <div class="cnt-us">
+
+          </div>
+          <div class="data-wrap">
+            <div class="data-item phone">Call at anytime: <span>+1 347 983-97-03</span></div>
+            <div class="data-item email">Send letters: <span>hello@l2.exchange</span></div>
+            <div class="data-item address">Visit us: <span>Moscow, Zamoskvorechnaya str., 25, of.5</span></div>
+          </div>
+        </div>
       </div>
     </section>
     <Footer/>
@@ -53,6 +62,47 @@
 </script>
 
 <style>
+.cnt-us {
+  height: 500px;
+  background: url("/contact-img/level2-img1.jpg") no-repeat center;
+  margin-bottom: 20px;
+}
 
+.data-wrap {
+  height: 230px;
+  background: #FAFAFA;
+}
+
+.data-item {
+  height: 77px;
+  line-height: 77px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #A2A2A2;
+}
+
+.data-item:nth-child(1),
+.data-item:nth-child(2) {
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.phone {
+  padding-left: 130px;
+}
+
+.email {
+  padding-left: 165px;
+}
+
+.address {
+  padding-left: 195px;
+}
+
+.phone span,
+.email span,
+.address span {
+  color: #5DD581;
+  font-size: 16px;
+}
 </style>
 

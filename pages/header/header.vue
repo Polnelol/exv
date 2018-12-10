@@ -9,7 +9,7 @@
                     <li class="navbar__item"><nuxt-link to="/trading/trading-list">Trading</nuxt-link></li>
                     <li class="navbar__item"><nuxt-link to="/crypto/crypto-list">Crypto</nuxt-link></li>
                     <li class="navbar__item"><nuxt-link to="/level2/level2-list">Level2</nuxt-link></li>
-                    <li class="navbar__item"><a href="https://l2.exchange/">Contact us</a></li>
+                    <li class="navbar__item"><nuxt-link to="/contact/contact">Contact us</nuxt-link></li>
                 </ul>
             </div>
         </nav>
@@ -28,7 +28,7 @@
                     <li class="navbar__item"><nuxt-link to="/trading/trading-list">Trading</nuxt-link></li>
                     <li class="navbar__item"><nuxt-link to="/crypto/crypto-list">Crypto</nuxt-link></li>
                     <li class="navbar__item"><nuxt-link to="/level2/level2-list">Level2</nuxt-link> </li>
-                    <li class="navbar__item"><a href="https://l2.exchange/">Contact us</a></li>
+                    <li class="navbar__item"><nuxt-link to="/contact/contact">Contact us</nuxt-link></li>
                 </ul>
             </div>
           </nav>
