@@ -135,6 +135,10 @@
 
 <style>
 
+.medium-article a {
+    margin-bottom: 20px;
+}
+
 .medium-article__description {
     color: #A2A2A2;
     font-size: 13px;

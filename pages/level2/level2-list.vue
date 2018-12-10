@@ -14,7 +14,8 @@
                                     :ImgSrc="Level2Single.ImgSrc"
                                     :title="Level2Single.title"
                                     :previewText="Level2Single.previewText"
-                                    :id="Level2Single.id"/>
+                                    :id="Level2Single.id"
+                                    :date="Level2Single.date"/>
                             </div>
                         </div>
                     </div>
@@ -112,17 +113,20 @@
                         {   ImgSrc: post1.ImgSrc,
                             id: "1",
                             title: post1.title,
-                            indent: post1.indent
+                            indent: post1.indent,
+                            date: post1.date
                         },
                         {   ImgSrc: post2.ImgSrc,
                             id: "2",
                             title: post2.title,
-                            indent: post2.indent
+                            indent: post2.indent,
+                            date: post2.date
                         },
                         {   ImgSrc: post3.ImgSrc,
                             id: "3",
                             title: post3.title,
-                            indent: post3.indent
+                            indent: post3.indent,
+                            date: post3.date
                         }
                     ]
         }
@@ -131,6 +135,15 @@
 </script>
 
 <style>
+.medium-article a {
+    margin-bottom: 20px;
+}
+
+.medium-article__description {
+    color: #A2A2A2;
+    font-size: 13px;
+    margin-top: -10px;
+}
 </style>
 
 
