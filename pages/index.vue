@@ -10,7 +10,8 @@
               :key="Level2Single1.id"
               :ImgSrc="Level2Single1.ImgSrc"
               :title="Level2Single1.title"
-              :id="Level2Single1.id"/>
+              :id="Level2Single1.id"
+              :indent="Level2Single1.indent"/>
             <div class="medium-article-wrap">
               <div class="medium-article">
                 <Level2Single2
@@ -74,6 +75,36 @@
                     >
                     </cryptoWidget>
                 </div>
+              </div>
+            </div>
+            <div class="subscribe-block">
+              <div class="subscribe-block__title">Subscribe</div>
+              <div class="subscribe-block__wrap">
+                <input type="email" class="subscribe-block__email" placeholder="Your email">
+                <input type="button" class="subscribe-block__btn">
+              </div>
+            </div>
+            <div class="most-recent">
+              <div class="most-recent__title">Most recent articles</div>
+              <div class="most-recent__wrap">
+                <Level2Single1
+                  v-for="Level2Single1 in Level2Singles1"
+                  :key="Level2Single1.id"
+                  :title="Level2Single1.title"
+                  :id="Level2Single1.id"
+                  :date="Level2Single1.date"/>
+                <CryptoSingle1
+                  v-for="CryptoSingle1 in CryptoSingles1"
+                  :key="CryptoSingle1.id"
+                  :title="CryptoSingle1.title"
+                  :id="CryptoSingle1.id"
+                  :date="CryptoSingle1.date"/>
+                <TradingSingle1
+                  v-for="TradingSingle1 in TradingSingles1"
+                  :key="TradingSingle1.id"
+                  :title="TradingSingle1.title"
+                  :id="TradingSingle1.id"
+                  :date="TradingSingle1.date"/>
               </div>
             </div>
           </div>
@@ -146,42 +177,48 @@
                         {   ImgSrc: LargePost1.ImgSrc,
                             id: "1",
                             title: LargePost1.title,
-                            indent: LargePost1.indent
+                            indent: LargePost1.indent,
+                            date: LargePost1.date
                         }
                     ],
             Level2Singles2: [
                         {   ImgSrc: MediumPost1.ImgSrc,
                             id: "2",
                             title: MediumPost1.title,
-                            indent: MediumPost1.indent
+                            indent: MediumPost1.indent,
+                            date: MediumPost1.date
                         }
                     ],
             Level2Singles3: [
                         {   ImgSrc: MediumPost2.ImgSrc,
                             id: "3",
                             title: MediumPost2.title,
-                            indent: MediumPost2.indent
+                            indent: MediumPost2.indent,
+                            date: MediumPost2.date
                         }
                     ],
             CryptoSingles1: [
                         {   ImgSrc: SmallPost1.ImgSrc,
                             id: "1",
                             title: SmallPost1.title,
-                            indent: SmallPost1.indent
+                            indent: SmallPost1.indent,
+                            date: SmallPost1.date
                         }
                     ],
             TradingSingles1: [
                         {   ImgSrc: SmallPost2.ImgSrc,
                             id: "1",
                             title: SmallPost2.title,
-                            indent: SmallPost2.indent
+                            indent: SmallPost2.indent,
+                            date: SmallPost2.date
                         }
                     ],
             TradingSingles2: [
                         {   ImgSrc: SmallPost3.ImgSrc,
                             id: "2",
                             title: SmallPost3.title,
-                            indent: SmallPost3.indent
+                            indent: SmallPost3.indent,
+                            date: SmallPost3.date
                         }
                     ]
         }
