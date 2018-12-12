@@ -67,6 +67,7 @@ export default {
         background-color: #18232C;
         height: 65px;
         margin-bottom: 20px;
+        border-bottom: 2px solid #28C861;
     }
 
     .header-mobile {
