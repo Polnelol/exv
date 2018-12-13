@@ -48,13 +48,12 @@
                   :id="TradingSingle1.id"/>
               </div>
               <div class="small-article">
-                <TradingSingle2
-                  v-for="TradingSingle2 in TradingSingles2"
-                  :key="TradingSingle2.id"
-                  :ImgSrc="TradingSingle2.ImgSrc"
-                  :title="TradingSingle2.title"
-
-                  :id="TradingSingle2.id"/>
+                <NewsSingle1
+                  v-for="NewsSingle1 in NewsSingles1"
+                  :key="NewsSingle1.id"
+                  :ImgSrc="NewsSingle1.ImgSrc"
+                  :title="NewsSingle1.title"
+                  :id="NewsSingle1.id"/>
               </div>
             </div>
           </div>
@@ -124,6 +123,7 @@
   import Level2Single2 from '~/components/level2-single.vue'
   import Level2Single3 from '~/components/level2-single.vue'
   import CryptoSingle1 from '~/components/crypto-single.vue'
+  import NewsSingle1 from '~/components/news-single.vue'
   import TradingSingle1 from '~/components/trading-single.vue'
   import TradingSingle2 from '~/components/trading-single.vue'
   import LargePost1 from "~/posts/level2/level2-news1/level2-news1.json"
@@ -132,6 +132,7 @@
   import SmallPost1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
   import SmallPost2 from "~/posts/trading/trading-news1/trading-news1.json"
   import SmallPost3 from "~/posts/trading/trading-news2/trading-news2.json"
+  import SmallPost4 from "~/posts/news/news1/news1.json"
   import '~/assets/main.css'
   
   
@@ -148,7 +149,8 @@
       Level2Single3,
       CryptoSingle1,
       TradingSingle1,
-      TradingSingle2
+      TradingSingle2,
+      NewsSingle1
     },
     asyncData(){
         return axios
@@ -213,12 +215,12 @@
                             date: SmallPost2.date
                         }
                     ],
-            TradingSingles2: [
-                        {   ImgSrc: SmallPost3.ImgSrc,
-                            id: "2",
-                            title: SmallPost3.title,
-                            indent: SmallPost3.indent,
-                            date: SmallPost3.date
+            NewsSingles1: [
+                        {   ImgSrc: SmallPost4.ImgSrc,
+                            id: "1",
+                            title: SmallPost4.title,
+                            indent: SmallPost4.indent,
+                            date: SmallPost4.date
                         }
                     ]
         }

@@ -57,7 +57,6 @@
 
 .medium-article {
   width: 100%;
-  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -168,7 +167,7 @@
 }
 
 .single-page-title {
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 5px;
 }
 
@@ -217,7 +216,7 @@
 }
 
 .most-recent {
-  margin-top: 40px;
+  margin-top: 65px;
 }
 
 .most-recent a {
@@ -258,61 +257,38 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
+  margin-bottom: 40px;
 }
 
-.paginator-btn-wrpap button {
-  position: relative;
-  border: 1px solid #E8E8E8;
-  background: #fff;
-  width: 120px;
-  height: 30px;
-  color: #B2B2B2;
-  font-size: 14px;
+.also-wrap {
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
 
-.paginator-btn-wrpap button:nth-child(1) {
-  border-left: none;
+.also-wrap a {
+  width: 30%;
+  margin-right: 3%
 }
 
-.paginator-btn-wrpap button:nth-child(1):before {
-  position: absolute;
-  content: "123";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 15px 13px 15px 0;
-  border-color: transparent #E8E8E8 transparent transparent;
-  background-color: #fff;
-
+.also-wrap a:last-child {
+  margin-right: 0;
 }
 
-.paginator-btn-wrpap button:nth-child(1):after, .paginator-btn-wrpap button:nth-child(1):before {
-	right: 100%;
-	top: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
+.also-title {
+  font-size: 16px;
+  color: #28C760;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.paginator-btn-wrpap button:nth-child(1):after {
-	border-color: rgba(255, 255, 255, 0);
-	border-right-color: #fff;
-	border-width: 15px;
-	margin-top: -15px;
-}
-.paginator-btn-wrpap button:nth-child(1):before {
-	border-color: rgba(178, 178, 178, 0);
-	border-right-color: #B2B2B2;
-	border-width: 15px;
-	margin-top: -15px;
-}
-
-
-.paginator-btn-wrpap button:nth-child(2) {
-  outline: 2px solid red;
+.left-cnt__banner {
+  width: 816px;
+  height: 160px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: url("img/trading-banner.jpg") no-repeat center;
 }
 
 @media (max-width: 850px) {

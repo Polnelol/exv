@@ -18,6 +18,7 @@
                                     :date="TradingSingle.date"/>
                             </div>
                         </div>
+                        <a href="https://l2.exchange/"><div class="left-cnt left-cnt__banner"></div></a>
                     </div>
                     <div class="main-content-right right-cnt">
                         <div class="crypto-wrap">
@@ -56,9 +57,11 @@
   import post1 from "~/posts/trading/trading-news1/trading-news1.json"
   import post2 from "~/posts/trading/trading-news2/trading-news2.json"
   import post3 from "~/posts/trading/trading-news3/trading-news3.json"
+  import post4 from "~/posts/trading/trading-news4/trading-news4.json"
   import indent1 from "~/posts/trading/trading-news1/trading-news1.md"
   import indent2 from "~/posts/trading/trading-news2/trading-news2.md"
   import indent3 from "~/posts/trading/trading-news3/trading-news3.md"
+  import indent4 from "~/posts/trading/trading-news4/trading-news4.md"
   
   
 
@@ -71,9 +74,11 @@
       post1,
       post2,
       post3,
+      post4,
       indent1,
       indent2,
-      indent3
+      indent3,
+      indent4
     },
     computed: {
       indent1() {
@@ -84,6 +89,9 @@
       },
       indent3() {
         return indent3
+      },
+      indent4() {
+          return indent4
       }
     },
     asyncData(){
@@ -127,6 +135,12 @@
                             title: post3.title,
                             indent: post3.indent,
                             date: post3.date
+                        },
+                        {   ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            indent: post4.indent,
+                            date: post4.date
                         }
                     ]
         }

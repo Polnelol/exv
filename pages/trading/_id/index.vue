@@ -12,6 +12,31 @@
               <img v-else :key="TradingSingle.ImgSrc">
             </div>
             <div class="single-page-indent" v-html="TradingSingle.indent"></div>
+            <div class="paginator">
+              <div class="paginator-btn-wrpap">
+              </div>
+            </div>
+            <div class="also-title">You may aslo like</div>
+            <div class="medium-article-wrap also-wrap">
+              <CryptoSingle1
+                v-for="CryptoSingle1 in CryptoSingles1"
+                :key="CryptoSingle1.id"
+                :ImgSrc="CryptoSingle1.ImgSrc"
+                :title="CryptoSingle1.title"
+                :id="CryptoSingle1.id"/>
+              <Level2Single1
+                v-for="Level2Single1 in Level2Singles1"
+                :key="Level2Single1.id"
+                :ImgSrc="Level2Single1.ImgSrc"
+                :title="Level2Single1.title"
+                :id="Level2Single1.id"/>
+              <NewsSingle1
+                  v-for="NewsSingle1 in NewsSingles1"
+                  :key="NewsSingle1.id"
+                  :ImgSrc="NewsSingle1.ImgSrc"
+                  :title="NewsSingle1.title"
+                  :id="NewsSingle1.id"/>
+            </div>
           </div>
           <div class="main-content-right right-cnt">
             <div class="crypto-wrap">
@@ -47,12 +72,13 @@
                   :title="CryptoSingle1.title"
                   :id="CryptoSingle1.id"
                   :date="CryptoSingle1.date"/>
-                <TradingSingle1
-                  v-for="TradingSingle1 in TradingSingles1"
-                  :key="TradingSingle1.id"
-                  :title="TradingSingle1.title"
-                  :id="TradingSingle1.id"
-                  :date="TradingSingle1.date"/>
+                <NewsSingle1
+                  v-for="NewsSingle1 in NewsSingles1"
+                  :key="NewsSingle1.id"
+                  :ImgSrc="NewsSingle1.ImgSrc"
+                  :title="NewsSingle1.title"
+                  :id="NewsSingle1.id"
+                  :date="NewsSingle1.date"/>
               </div>
             </div>
             <div class="subscribe-block">
@@ -79,12 +105,16 @@ import post2 from "~/posts/trading/trading-news2/trading-news2.json"
 import indent2 from "~/posts/trading/trading-news2/trading-news2.md"
 import post3 from "~/posts/trading/trading-news3/trading-news3.json"
 import indent3 from "~/posts/trading/trading-news3/trading-news3.md"
+import post4 from "~/posts/trading/trading-news4/trading-news4.json"
+import indent4 from "~/posts/trading/trading-news4/trading-news4.md"
 import Level2Single1 from '~/components/level2-single.vue'
 import CryptoSingle1 from '~/components/crypto-single.vue'
 import TradingSingle1 from '~/components/trading-single.vue'
+import NewsSingle1 from '~/components/news-single.vue'
 import LargePost1 from "~/posts/level2/level2-news1/level2-news1.json"
 import SmallPost1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
 import SmallPost2 from "~/posts/trading/trading-news1/trading-news1.json"
+import SmallPost4 from "~/posts/news/news1/news1.json"
 
 export default {
     components: {
@@ -93,12 +123,15 @@ export default {
       post1,
       post2,
       post3,
+      post4,
       indent1,
       indent2,
       indent3,
+      indent4,
       Level2Single1,
       CryptoSingle1,
-      TradingSingle1
+      TradingSingle1,
+      NewsSingle1
     },
     computed: {
       indent1() {
@@ -118,6 +151,12 @@ export default {
       },
       post3() {
         return post3
+      },
+      indent4() {
+        return indent4
+      },
+      post4() {
+        return post4
       },
     },
     asyncData(context) {
@@ -143,6 +182,13 @@ export default {
                             title: post3.title,
                             date: post3.date,
                             indent: indent3
+                        },
+                        {
+                            ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            date: post4.date,
+                            indent: indent4
                         }
                    ].find(el => el.id === context.params.id)
                 })
@@ -173,7 +219,16 @@ export default {
                             indent: SmallPost2.indent,
                             date: SmallPost2.date
                         }
-                    ]
+                    ],
+            NewsSingles1: [
+                        {   ImgSrc: SmallPost4.ImgSrc,
+                            id: "1",
+                            title: SmallPost4.title,
+                            indent: SmallPost4.indent,
+                            date: SmallPost4.date
+                        }
+                    ],
+            
         }
     }
 }

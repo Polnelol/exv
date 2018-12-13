@@ -56,9 +56,13 @@
   import post1 from "~/posts/level2/level2-news1/level2-news1.json"
   import post2 from "~/posts/level2/level2-news2/level2-news2.json"
   import post3 from "~/posts/level2/level2-news3/level2-news3.json"
+  import post4 from "~/posts/level2/level2-news4/level2-news4.json"
+  import post5 from "~/posts/level2/level2-news5/level2-news5.json"
   import indent1 from "~/posts/level2/level2-news1/level2-news1.md"
   import indent2 from "~/posts/level2/level2-news2/level2-news2.md"
   import indent3 from "~/posts/level2/level2-news3/level2-news3.md"
+  import indent4 from "~/posts/level2/level2-news4/level2-news4.md"
+  import indent5 from "~/posts/level2/level2-news5/level2-news5.md"
   
   
 
@@ -71,9 +75,13 @@
       post1,
       post2,
       post3,
+      post4,
+      post5,
       indent1,
       indent2,
-      indent3
+      indent3,
+      indent4,
+      indent5
     },
     computed: {
       indent1() {
@@ -84,6 +92,12 @@
       },
       indent3() {
         return indent3
+      },
+      indent4() {
+        return indent4
+      },
+      indent5() {
+        return indent5
       }
     },
     asyncData(){
@@ -127,6 +141,18 @@
                             title: post3.title,
                             indent: post3.indent,
                             date: post3.date
+                        },
+                        {   ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            indent: post4.indent,
+                            date: post4.date
+                        },
+                        {   ImgSrc: post5.ImgSrc,
+                            id: "5",
+                            title: post5.title,
+                            indent: post5.indent,
+                            date: post5.date
                         }
                     ]
         }

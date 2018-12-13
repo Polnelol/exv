@@ -11,6 +11,32 @@
               <img :src="CryptoSingle.ImgSrc">
             </div>
             <div class="single-page-indent" v-html="CryptoSingle.indent"></div>
+            <div class="paginator">
+              <div class="paginator-btn-wrpap">
+              </div>
+            </div>
+            <div class="also-title">You may aslo like</div>
+            <div class="medium-article-wrap also-wrap">
+              <CryptoSingle1
+                v-for="CryptoSingle1 in CryptoSingles1"
+                :key="CryptoSingle1.id"
+                :ImgSrc="CryptoSingle1.ImgSrc"
+                :title="CryptoSingle1.title"
+                :previewText="CryptoSingle1.previewText"
+                :id="CryptoSingle1.id"/>
+              <TradingSingle1
+                v-for="TradingSingle1 in TradingSingles1"
+                :key="TradingSingle1.id"
+                :ImgSrc="TradingSingle1.ImgSrc"
+                :title="TradingSingle1.title"
+                :id="TradingSingle1.id"/>
+              <NewsSingle1
+                v-for="NewsSingle1 in NewsSingles1"
+                :key="NewsSingle1.id"
+                :ImgSrc="NewsSingle1.ImgSrc"
+                :title="NewsSingle1.title"
+                :id="NewsSingle1.id"/>
+            </div>
           </div>
           <div class="main-content-right right-cnt">
             <div class="crypto-wrap">
@@ -40,12 +66,12 @@
                   :title="Level2Single1.title"
                   :id="Level2Single1.id"
                   :date="Level2Single1.date"/>
-                <CryptoSingle1
-                  v-for="CryptoSingle1 in CryptoSingles1"
-                  :key="CryptoSingle1.id"
-                  :title="CryptoSingle1.title"
-                  :id="CryptoSingle1.id"
-                  :date="CryptoSingle1.date"/>
+                <NewsSingle1
+                  v-for="NewsSingle1 in NewsSingles1"
+                  :key="NewsSingle1.id"
+                  :title="NewsSingle1.title"
+                  :id="NewsSingle1.id"
+                  :date="NewsSingle1.date"/>
                 <TradingSingle1
                   v-for="TradingSingle1 in TradingSingles1"
                   :key="TradingSingle1.id"
@@ -80,10 +106,13 @@ import post3 from "~/posts/crypto/crypto-news3/crypto-news3.json"
 import indent3 from "~/posts/crypto/crypto-news3/crypto-news3.md"
 import Level2Single1 from '~/components/level2-single.vue'
 import CryptoSingle1 from '~/components/crypto-single.vue'
+import CryptoSingle from '~/components/crypto-single.vue'
 import TradingSingle1 from '~/components/trading-single.vue'
+import NewsSingle1 from '~/components/news-single.vue'
 import LargePost1 from "~/posts/level2/level2-news1/level2-news1.json"
 import SmallPost1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
 import SmallPost2 from "~/posts/trading/trading-news1/trading-news1.json"
+import SmallPost4 from "~/posts/news/news1/news1.json"
 
 export default {
     components: {
@@ -97,7 +126,9 @@ export default {
       indent3,
       Level2Single1,
       CryptoSingle1,
-      TradingSingle1
+      TradingSingle1,
+      CryptoSingle,
+      NewsSingle1
     },
     computed: {
       indent1() {
@@ -171,6 +202,32 @@ export default {
                             title: SmallPost2.title,
                             indent: SmallPost2.indent,
                             date: SmallPost2.date
+                        }
+                    ],
+            NewsSingles1: [
+                        {   ImgSrc: SmallPost4.ImgSrc,
+                            id: "1",
+                            title: SmallPost4.title,
+                            indent: SmallPost4.indent,
+                            date: SmallPost4.date
+                        }
+                    ],
+                    CryptoSingles: [
+                        {   ImgSrc: post1.ImgSrc,
+                            id: "1",
+                            title: post1.title,
+                            indent: post1.indent,
+                            date: post1.date
+                        },
+                        {   ImgSrc: post2.ImgSrc,
+                            id: "2",
+                            title: post2.title,
+                            indent: post2.indent
+                        },
+                        {   ImgSrc: post3.ImgSrc,
+                            id: "3",
+                            title: post3.title,
+                            indent: post3.indent
                         }
                     ]
         }

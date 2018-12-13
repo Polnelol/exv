@@ -12,6 +12,31 @@
               <img v-else :key="NewsSingle.ImgSrc">
             </div>
             <div class="single-page-indent" v-html="NewsSingle.indent"></div>
+            <div class="paginator">
+              <div class="paginator-btn-wrpap">
+              </div>
+            </div>
+            <div class="also-title">You may aslo like</div>
+            <div class="medium-article-wrap also-wrap">
+              <Level2Single1
+                v-for="Level2Single1 in Level2Singles1"
+                :key="Level2Single1.id"
+                :ImgSrc="Level2Single1.ImgSrc"
+                :title="Level2Single1.title"
+                :id="Level2Single1.id"/>
+              <TradingSingle1
+                  v-for="TradingSingle1 in TradingSingles1"
+                  :key="TradingSingle1.id"
+                  :ImgSrc="TradingSingle1.ImgSrc"
+                  :title="TradingSingle1.title"
+                  :id="TradingSingle1.id"/>
+              <CryptoSingle1
+                  v-for="CryptoSingle1 in CryptoSingles1"
+                  :key="CryptoSingle1.id"
+                  :ImgSrc="CryptoSingle1.ImgSrc"
+                  :title="CryptoSingle1.title"
+                  :id="CryptoSingle1.id"/>
+            </div>
           </div>
           <div class="main-content-right right-cnt">
             <div class="crypto-wrap">
@@ -95,7 +120,10 @@ export default {
       post3,
       indent1,
       indent2,
-      indent3
+      indent3,
+      Level2Single1,
+      CryptoSingle1,
+      TradingSingle1
     },
     computed: {
       indent1() {
