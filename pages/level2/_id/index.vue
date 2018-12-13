@@ -12,6 +12,10 @@
               <img v-else :key="Level2Single.ImgSrc">
             </div>
             <div class="single-page-indent" v-html="Level2Single.indent"></div>
+            <div class="paginator">
+              <div class="paginator-btn-wrpap">
+              </div>
+            </div>
           </div>
           <div class="main-content-right right-cnt">
             <div class="crypto-wrap">

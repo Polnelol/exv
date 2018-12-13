@@ -28,7 +28,6 @@
     .footer {
         background-color: #131C22;
         padding: 15px 0 15px 0;
-        margin-top: 20px;
     }
 
     .footer__cnt {

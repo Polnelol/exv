@@ -179,6 +179,7 @@
 
 .single-page-indent {
   font-size: 19px;
+  margin-bottom: 20px;
 }
 
 .subscribe-block {
@@ -247,6 +248,71 @@
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.paginator {
+  border-bottom: 1px solid #E8E8E8;
+  height: 65px;;
+  background: url("img/paginator-bg.png") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.paginator-btn-wrpap button {
+  position: relative;
+  border: 1px solid #E8E8E8;
+  background: #fff;
+  width: 120px;
+  height: 30px;
+  color: #B2B2B2;
+  font-size: 14px;
+}
+
+.paginator-btn-wrpap button:nth-child(1) {
+  border-left: none;
+}
+
+.paginator-btn-wrpap button:nth-child(1):before {
+  position: absolute;
+  content: "123";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 13px 15px 0;
+  border-color: transparent #E8E8E8 transparent transparent;
+  background-color: #fff;
+
+}
+
+.paginator-btn-wrpap button:nth-child(1):after, .paginator-btn-wrpap button:nth-child(1):before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.paginator-btn-wrpap button:nth-child(1):after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #fff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.paginator-btn-wrpap button:nth-child(1):before {
+	border-color: rgba(178, 178, 178, 0);
+	border-right-color: #B2B2B2;
+	border-width: 15px;
+	margin-top: -15px;
+}
+
+
+.paginator-btn-wrpap button:nth-child(2) {
+  outline: 2px solid red;
 }
 
 @media (max-width: 850px) {
