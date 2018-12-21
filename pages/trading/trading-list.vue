@@ -58,10 +58,12 @@
   import post2 from "~/posts/trading/trading-news2/trading-news2.json"
   import post3 from "~/posts/trading/trading-news3/trading-news3.json"
   import post4 from "~/posts/trading/trading-news4/trading-news4.json"
+  import post5 from "~/posts/trading/trading-news5/trading-news5.json"
   import indent1 from "~/posts/trading/trading-news1/trading-news1.md"
   import indent2 from "~/posts/trading/trading-news2/trading-news2.md"
   import indent3 from "~/posts/trading/trading-news3/trading-news3.md"
   import indent4 from "~/posts/trading/trading-news4/trading-news4.md"
+  import indent5 from "~/posts/trading/trading-news5/trading-news5.md"
   
   
 
@@ -75,10 +77,12 @@
       post2,
       post3,
       post4,
+      post5,
       indent1,
       indent2,
       indent3,
-      indent4
+      indent4,
+      indent5
     },
     computed: {
       indent1() {
@@ -92,6 +96,9 @@
       },
       indent4() {
           return indent4
+      },
+      indent5() {
+          return indent5
       }
     },
     asyncData(){
@@ -141,6 +148,12 @@
                             title: post4.title,
                             indent: post4.indent,
                             date: post4.date
+                        },
+                        {   ImgSrc: post5.ImgSrc,
+                            id: "5",
+                            title: post5.title,
+                            indent: post5.indent,
+                            date: post5.date
                         }
                     ]
         }

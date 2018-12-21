@@ -17,6 +17,7 @@
                                     :id="Level2Single.id"
                                     :date="Level2Single.date"/>
                             </div>
+                            <a href="https://l2.exchange/"><div class="left-cnt left-cnt__banner"></div></a>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">

@@ -107,6 +107,8 @@ import post3 from "~/posts/trading/trading-news3/trading-news3.json"
 import indent3 from "~/posts/trading/trading-news3/trading-news3.md"
 import post4 from "~/posts/trading/trading-news4/trading-news4.json"
 import indent4 from "~/posts/trading/trading-news4/trading-news4.md"
+import post5 from "~/posts/trading/trading-news5/trading-news5.json"
+import indent5 from "~/posts/trading/trading-news5/trading-news5.md"
 import Level2Single1 from '~/components/level2-single.vue'
 import CryptoSingle1 from '~/components/crypto-single.vue'
 import TradingSingle1 from '~/components/trading-single.vue'
@@ -124,10 +126,12 @@ export default {
       post2,
       post3,
       post4,
+      post5,
       indent1,
       indent2,
       indent3,
       indent4,
+      indent5,
       Level2Single1,
       CryptoSingle1,
       TradingSingle1,
@@ -157,6 +161,12 @@ export default {
       },
       post4() {
         return post4
+      },
+      indent5() {
+        return indent5
+      },
+      post5() {
+        return post5
       },
     },
     asyncData(context) {
@@ -189,6 +199,13 @@ export default {
                             title: post4.title,
                             date: post4.date,
                             indent: indent4
+                        },
+                        {
+                            ImgSrc: post5.ImgSrc,
+                            id: "5",
+                            title: post5.title,
+                            date: post5.date,
+                            indent: indent5
                         }
                    ].find(el => el.id === context.params.id)
                 })

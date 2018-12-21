@@ -104,6 +104,8 @@ import post2 from "~/posts/news/news2/news2.json"
 import indent2 from "~/posts/news/news2/news2.md"
 import post3 from "~/posts/news/news3/news3.json"
 import indent3 from "~/posts/news/news3/news3.md"
+import post4 from "~/posts/news/news4/news4.json"
+import indent4 from "~/posts/news/news4/news4.md"
 import Level2Single1 from '~/components/level2-single.vue'
 import CryptoSingle1 from '~/components/crypto-single.vue'
 import TradingSingle1 from '~/components/trading-single.vue'
@@ -118,9 +120,11 @@ export default {
       post1,
       post2,
       post3,
+      post4,
       indent1,
       indent2,
       indent3,
+      indent4,
       Level2Single1,
       CryptoSingle1,
       TradingSingle1
@@ -144,6 +148,12 @@ export default {
       post3() {
         return post3
       },
+      indent4() {
+        return indent4
+      },
+      post4() {
+        return post4
+      }
     },
     asyncData(context) {
         return new Promise((resolve, reject) => {
@@ -168,6 +178,13 @@ export default {
                             title: post3.title,
                             date: post3.date,
                             indent: indent3
+                        },
+                        {
+                            ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            date: post4.date,
+                            indent: indent4
                         }
                    ].find(el => el.id === context.params.id)
                 })

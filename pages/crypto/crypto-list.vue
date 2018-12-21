@@ -17,6 +17,7 @@
                                     :id="CryptoSingle.id"
                                     :date="CryptoSingle.date"/>
                             </div>
+                            <a href="https://l2.exchange/"><div class="left-cnt left-cnt__banner"></div></a>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">
@@ -56,9 +57,11 @@
   import post1 from "~/posts/crypto/crypto-news1/crypto-news1.json"
   import post2 from "~/posts/crypto/crypto-news2/crypto-news2.json"
   import post3 from "~/posts/crypto/crypto-news3/crypto-news3.json"
+  import post4 from "~/posts/crypto/crypto-news4/crypto-news4.json"
   import indent1 from "~/posts/crypto/crypto-news1/crypto-news1.md"
   import indent2 from "~/posts/crypto/crypto-news2/crypto-news2.md"
   import indent3 from "~/posts/crypto/crypto-news3/crypto-news3.md"
+  import indent4 from "~/posts/crypto/crypto-news4/crypto-news4.md"
   
   
 
@@ -71,9 +74,11 @@
       post1,
       post2,
       post3,
+      post4,
       indent1,
       indent2,
-      indent3
+      indent3,
+      indent4
     },
     computed: {
       indent1() {
@@ -84,6 +89,9 @@
       },
       indent3() {
         return indent3
+      },
+      indent4() {
+        return indent4
       }
     },
     asyncData(){
@@ -119,12 +127,20 @@
                         {   ImgSrc: post2.ImgSrc,
                             id: "2",
                             title: post2.title,
-                            indent: post2.indent
+                            indent: post2.indent,
+                            date: post2.date
                         },
                         {   ImgSrc: post3.ImgSrc,
                             id: "3",
                             title: post3.title,
-                            indent: post3.indent
+                            indent: post3.indent,
+                            date: post3.date
+                        },
+                        {   ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            indent: post4.indent,
+                            date: post4.date
                         }
                     ]
         }

@@ -104,6 +104,8 @@ import post2 from "~/posts/crypto/crypto-news2/crypto-news2.json"
 import indent2 from "~/posts/crypto/crypto-news2/crypto-news2.md"
 import post3 from "~/posts/crypto/crypto-news3/crypto-news3.json"
 import indent3 from "~/posts/crypto/crypto-news3/crypto-news3.md"
+import post4 from "~/posts/crypto/crypto-news4/crypto-news4.json"
+import indent4 from "~/posts/crypto/crypto-news4/crypto-news4.md"
 import Level2Single1 from '~/components/level2-single.vue'
 import CryptoSingle1 from '~/components/crypto-single.vue'
 import CryptoSingle from '~/components/crypto-single.vue'
@@ -121,9 +123,11 @@ export default {
       post1,
       post2,
       post3,
+      post4,
       indent1,
       indent2,
       indent3,
+      indent4,
       Level2Single1,
       CryptoSingle1,
       TradingSingle1,
@@ -149,6 +153,12 @@ export default {
       post3() {
         return post3
       },
+      indent4() {
+        return indent4
+      },
+      post4() {
+        return post4
+      },
     },
     asyncData(context) {
         return new Promise((resolve, reject) => {
@@ -173,6 +183,13 @@ export default {
                             title: post3.title,
                             date: post3.date,
                             indent: indent3
+                        },
+                        {
+                            ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            date: post4.date,
+                            indent: indent4
                         }
                    ].find(el => el.id === context.params.id)
                 })
@@ -228,6 +245,11 @@ export default {
                             id: "3",
                             title: post3.title,
                             indent: post3.indent
+                        },
+                        {   ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            indent: post4.indent
                         }
                     ]
         }

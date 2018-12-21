@@ -16,6 +16,7 @@
                                     :previewText="NewsSingle.previewText"
                                     :id="NewsSingle.id"/>
                             </div>
+                            <a href="https://l2.exchange/"><div class="left-cnt left-cnt__banner"></div></a>
                         </div>
                     </div>
                     <div class="main-content-right right-cnt">
@@ -55,9 +56,11 @@
   import post1 from "~/posts/news/news1/news1.json"
   import post2 from "~/posts/news/news2/news2.json"
   import post3 from "~/posts/news/news3/news3.json"
+  import post4 from "~/posts/news/news4/news4.json"
   import indent1 from "~/posts/news/news1/news1.md"
   import indent2 from "~/posts/news/news2/news2.md"
   import indent3 from "~/posts/news/news3/news3.md"
+  import indent4 from "~/posts/news/news4/news4.md"
   
   
 
@@ -83,6 +86,9 @@
       },
       indent3() {
         return indent3
+      },
+      indent4() {
+        return indent4
       }
     },
     asyncData(){
@@ -123,7 +129,12 @@
                             id: "3",
                             title: post3.title,
                             indent: post3.indent
-                        }
+                        },
+                        {   ImgSrc: post4.ImgSrc,
+                            id: "4",
+                            title: post4.title,
+                            indent: post4.indent
+                        },
                     ]
         }
     }
