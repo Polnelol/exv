@@ -56,6 +56,73 @@
                   :id="NewsSingle1.id"/>
               </div>
             </div>
+            <transition name="fade">
+            <div v-if="show1" class="small-article-wrap">
+              <div class="small-article">
+                <CryptoSingle2
+                  v-for="CryptoSingle2 in CryptoSingles2"
+                  :key="CryptoSingle2.id"
+                  :ImgSrc="CryptoSingle2.ImgSrc"
+                  :title="CryptoSingle2.title"
+                  :id="CryptoSingle2.id"/>
+              </div>
+              <div class="small-article">
+                <TradingSingle2
+                  v-for="TradingSingle2 in TradingSingles2"
+                  :key="TradingSingle2.id"
+                  :ImgSrc="TradingSingle2.ImgSrc"
+                  :title="TradingSingle2.title"
+                  :id="TradingSingle2.id"/>
+              </div>
+              <div class="small-article">
+                <NewsSingle2
+                  v-for="NewsSingle2 in NewsSingles2"
+                  :key="NewsSingle2.id"
+                  :ImgSrc="NewsSingle2.ImgSrc"
+                  :title="NewsSingle2.title"
+                  :id="NewsSingle2.id"/>
+              </div>
+            </div>
+            </transition>
+            <transition name="fade">
+            <div v-if="showbtn1" class="paginator">
+              <button v-on:click="show1 = true, showbtn1 = false, showbtn2 = true " class="show-more-btn">Show more</button>
+            </div>
+            </transition>
+            <transition name="fade">
+            <div v-if="show2" class="small-article-wrap">
+              <div class="small-article">
+                <CryptoSingle3
+                  v-for="CryptoSingle3 in CryptoSingles3"
+                  :key="CryptoSingle3.id"
+                  :ImgSrc="CryptoSingle3.ImgSrc"
+                  :title="CryptoSingle3.title"
+                  :id="CryptoSingle3.id"/>
+              </div>
+              <div class="small-article">
+                <TradingSingle3
+                  v-for="TradingSingle3 in TradingSingles3"
+                  :key="TradingSingle3.id"
+                  :ImgSrc="TradingSingle3.ImgSrc"
+                  :title="TradingSingle3.title"
+                  :id="TradingSingle3.id"/>
+              </div>
+              <div class="small-article">
+                <NewsSingle3
+                  v-for="NewsSingle3 in NewsSingles3"
+                  :key="NewsSingle3.id"
+                  :ImgSrc="NewsSingle3.ImgSrc"
+                  :title="NewsSingle3.title"
+                  :id="NewsSingle3.id"/>
+              </div>
+            </div>
+            
+            </transition>
+            <transition name="fade">
+            <div v-if="showbtn2" class="paginator">
+              <button v-on:click="show2 = true, showbtn2 = false" class="show-more-btn">Show more</button>
+            </div>
+            </transition>
           </div>
           <div class="main-content-right right-cnt">
             <div class="crypto-wrap">
@@ -123,9 +190,14 @@
   import Level2Single2 from '~/components/level2-single.vue'
   import Level2Single3 from '~/components/level2-single.vue'
   import CryptoSingle1 from '~/components/crypto-single.vue'
+  import CryptoSingle2 from '~/components/crypto-single.vue'
+  import CryptoSingle3 from '~/components/crypto-single.vue'
   import NewsSingle1 from '~/components/news-single.vue'
+  import NewsSingle2 from '~/components/news-single.vue'
+  import NewsSingle3 from '~/components/news-single.vue'
   import TradingSingle1 from '~/components/trading-single.vue'
   import TradingSingle2 from '~/components/trading-single.vue'
+  import TradingSingle3 from '~/components/trading-single.vue'
   import LargePost1 from "~/posts/level2/level2-news1/level2-news1.json"
   import MediumPost1 from "~/posts/level2/level2-news2/level2-news2.json"
   import MediumPost2 from "~/posts/level2/level2-news3/level2-news3.json"
@@ -133,6 +205,12 @@
   import SmallPost2 from "~/posts/trading/trading-news1/trading-news1.json"
   import SmallPost3 from "~/posts/trading/trading-news2/trading-news2.json"
   import SmallPost4 from "~/posts/news/news1/news1.json"
+  import SmallPost5 from "~/posts/crypto/crypto-news2/crypto-news2.json"
+  import SmallPost6 from "~/posts/trading/trading-news2/trading-news2.json"
+  import SmallPost7 from "~/posts/news/news2/news2.json"
+  import SmallPost8 from "~/posts/crypto/crypto-news3/crypto-news3.json"
+  import SmallPost9 from "~/posts/trading/trading-news3/trading-news3.json"
+  import SmallPost10 from "~/posts/news/news3/news3.json"
   import '~/assets/main.css'
   
   
@@ -148,9 +226,14 @@
       Level2Single2,
       Level2Single3,
       CryptoSingle1,
+      CryptoSingle2,
+      CryptoSingle3,
       TradingSingle1,
       TradingSingle2,
-      NewsSingle1
+      TradingSingle3,
+      NewsSingle1,
+      NewsSingle2,
+      NewsSingle3
     },
     asyncData(){
         return axios
@@ -222,7 +305,59 @@
                             indent: SmallPost4.indent,
                             date: SmallPost4.date
                         }
-                    ]
+                    ],
+            CryptoSingles2: [
+                        {   ImgSrc: SmallPost5.ImgSrc,
+                            id: "2",
+                            title: SmallPost5.title,
+                            indent: SmallPost5.indent,
+                            date: SmallPost5.date
+                        }
+                    ],
+            TradingSingles2: [
+                        {   ImgSrc: SmallPost6.ImgSrc,
+                            id: "2",
+                            title: SmallPost6.title,
+                            indent: SmallPost6.indent,
+                            date: SmallPost6.date
+                        }
+                    ],
+            NewsSingles2: [
+                        {   ImgSrc: SmallPost7.ImgSrc,
+                            id: "2",
+                            title: SmallPost7.title,
+                            indent: SmallPost7.indent,
+                            date: SmallPost7.date
+                        }
+                    ],
+            CryptoSingles3: [
+                        {   ImgSrc: SmallPost8.ImgSrc,
+                            id: "3",
+                            title: SmallPost8.title,
+                            indent: SmallPost8.indent,
+                            date: SmallPost8.date
+                        }
+                    ],
+            TradingSingles3: [
+                        {   ImgSrc: SmallPost9.ImgSrc,
+                            id: "3",
+                            title: SmallPost9.title,
+                            indent: SmallPost9.indent,
+                            date: SmallPost9.date
+                        }
+                    ],
+            NewsSingles3: [
+                        {   ImgSrc: SmallPost10.ImgSrc,
+                            id: "3",
+                            title: SmallPost10.title,
+                            indent: SmallPost10.indent,
+                            date: SmallPost10.date
+                        }
+                    ],
+            show1: false,
+            show2: false,
+            showbtn1: true,
+            showbtn2: false
         }
     }
   }

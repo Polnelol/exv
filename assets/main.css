@@ -250,8 +250,9 @@
 }
 
 .paginator {
+  position: relative;
   border-bottom: 1px solid #E8E8E8;
-  height: 65px;;
+  height: 60px;
   background: url("img/paginator-bg.png") no-repeat center;
   background-size: cover;
   display: flex;
@@ -289,6 +290,25 @@
   border-radius: 10px;
   margin-bottom: 20px;
   background: url("img/trading-banner.jpg") no-repeat center;
+}
+
+.show-more-btn {
+  cursor: pointer;
+  top: 45px;
+  position: absolute;
+  background: white;
+  border: 1px solid #E8E8E8;
+  color: #B5B5B5;
+  width: 100px;
+  border-radius: 3px;
+  height: 30px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
 }
 
 @media (max-width: 850px) {
